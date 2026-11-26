@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Conference Guide</title>
+<meta name="description" content="Recurring conferences in India and around the world, across technology, science, medicine, business, design, climate, policy, the humanities and more. Free, works offline.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Conference Guide"><meta property="og:title" content="Conference Guide: India and the world, by stream">
+<meta property="og:description" content="When and where the major conferences in every field happen, starting with India.">
+<meta property="og:url" content="https://omshivaprakash.github.io/conference-guide/">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0f766e">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Conference Guide">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script defer src="geo.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<div class="app">
+<header class="fbar">
+  <div class="brand">
+    <b><a class="home" href="./"><img class="lgm" src="assets/logo.svg" alt="" width="24" height="24">Conference Guide</a></b>
+    <span class="bt">Conferences in India and the world, by stream</span>
+    <span class="bb"><button type="button" class="fsearch" id="open-search">Search</button><button type="button" class="fsearch" id="open-explore">Map</button><button type="button" class="fsearch" id="open-about">About</button></span>
+  </div>
+  <div class="fb-l" id="festival-strip" role="group" aria-label="Choose a stream"></div>
+  <nav class="tabs" id="tabs" aria-label="Guide sections"></nav>
+</header>
+
+<main class="view" id="home" hidden>
+  <div class="top">
+    <h1>Conferences worth knowing, in India and around the world</h1>
+    <p class="sub">When and where the major recurring conferences happen in each field, from tech and medicine to climate, design and the humanities. Pick a stream above, or browse them all.</p>
+  </div>
+  <div class="kpis" id="home-kpis"></div>
+  <div class="body"><div class="fgrid" id="festival-cards"></div><div class="homeexplore">
+      <div class="panel mapwrap" id="home-map"></div>
+      <div class="homelinks">
+        <h2 class="vh">Explore</h2>
+        <p class="sub">See every conference on a map, or search by name, city, organiser or month.</p>
+        <button type="button" class="hlink" data-go="map">World map of conferences ›</button>
+        <button type="button" class="hlink" data-go="list">All conferences, by month ›</button>
+        <p class="legend"><span><i></i>Fixed city</span><span><i class="wip"></i>Moves between cities in a country</span></p>
+      </div>
+    </div>
+    <div class="hstats" id="home-stats"></div></div>
+</main>
+
+<main class="view" id="discover" hidden>
+  <div class="top">
+    <p class="kicker" id="d-kicker"></p>
+    <h1 id="d-title"></h1>
+    <p class="sub" id="d-sub"></p>
+  </div>
+  <div class="kpis" id="d-kpis"></div>
+  <div class="panel"><h5>Conferences by usual month</h5><div id="d-bars"></div></div>
+  <h2 class="vh">India first, then the world</h2>
+  <div class="body"><div class="results scroll" id="d-shelf"></div></div>
+</main>
+
+<main class="view" id="explore" hidden>
+  <p class="sub" id="ex-note"></p>
+  <div class="exgrid">
+    <div class="panel mapwrap" id="ex-map"></div>
+    <div class="exbars" id="ex-bars"></div>
+  </div>
+</main>
+
+<main class="view" id="archive" hidden>
+  <h1 class="visually-hidden">Conferences</h1>
+  <div class="srow">
+    <label class="grow-1"><span class="visually-hidden">Search</span><input type="search" id="search" placeholder="Search names, cities, organisers…" autocomplete="off"></label>
+    <label><span class="visually-hidden">Where</span><select id="where"></select></label>
+    <label><span class="visually-hidden">Month</span><select id="month"></select></label>
+  </div>
+  <div class="meta-row"><p class="meta" id="count" aria-live="polite"></p><button type="button" class="x" id="reset">Clear</button></div>
+  <div class="body"><div id="results" class="results"></div></div>
+</main>
+
+<nav class="pager" id="pager" aria-label="Results pages" hidden>
+  <button type="button" class="pbtn" id="previous">‹ Prev</button>
+  <span id="page-status" aria-live="polite"></span>
+  <button type="button" class="pbtn" id="next">Next ›</button>
+</nav>
+</div>
+
+<dialog id="detail" aria-labelledby="detail-title"><form method="dialog"><button class="close" aria-label="Close">×</button></form><div id="detail-content"></div></dialog>
+</body>
+</html>
