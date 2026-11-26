@@ -47,7 +47,7 @@ India includes, for example, Bengaluru Tech Summit, India Mobile Congress, Nullc
 
 Mostly, with care.
 
-- Each entry is **hand-listed** from the conference's official site and organiser.
+- Each entry is **hand-listed** from the conference's official site and organiser. Every India entry was checked online in November 2026, and a weekly job flags dead links and disagreements with Wikidata.
 - **The month is the usual one.** Dates, venues and host cities change, and some conferences skip years. The official site is always the final word, and every entry links to it (or offers a web search where we have no confirmed site).
 - Conferences that **move between cities** sit at their country's centre on the map, drawn as a hollow dot. Those that move between countries are listed beside the map instead.
 
@@ -85,6 +85,17 @@ A website made of plain files: `index.html`, `app.js`, `style.css`, the map outl
 | `org` | Organiser |
 | `url` | Official site (https), where confirmed |
 | `desc` | One sentence in our own words |
+| `wikidata` | Wikidata item id, added by the weekly refresh |
+
+### Weekly refresh
+
+Every Monday, GitHub Actions runs `tools/extractors/refresh/extract.py` (`.github/workflows/refresh.yml`, or run it by hand from the Actions tab). It:
+
+- checks every official link and lists dead or moved ones;
+- matches each conference to Wikidata, but only when the Wikidata item's official website is on the same site as ours, and stores its `wikidata` id;
+- fills in a missing first year from Wikidata, and never overwrites a year or anything else we checked by hand.
+
+Anything else it finds, such as Wikidata giving a different first year or website, goes into `data/refresh/report.json` for a person to review. It commits only when something changed.
 
 ### Adding a conference
 

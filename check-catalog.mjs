@@ -19,6 +19,7 @@ for (const record of conferences) {
   assert.ok(record.city ? record.country : true, `${at}: a city needs a country`);
   assert.ok(MONTH.test(record.month) && monthsOf(record.month).length, `${at}: month must name a month`);
   if (record.since) assert.ok(record.since > 1800 && record.since <= new Date().getFullYear(), `${at}: since`);
+  if (record.wikidata) assert.ok(/^Q[0-9]+$/.test(record.wikidata), `${at}: wikidata must be a Q id`);
   if (record.url) assert.equal(new URL(record.url).protocol, 'https:', `${at}: url must be https`);
 }
 for (const [city, [lon, lat]] of Object.entries(places)) assert.ok(Math.abs(lat) <= 90 && Math.abs(lon) <= 180, `${city} coordinates`);
