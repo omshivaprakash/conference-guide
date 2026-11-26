@@ -9,4 +9,4 @@ jobs:
         with:
           node-version: 20
       - name: Validate app and data
-        run: node --check app.js && node check-catalog.mjs && python3 tools/extractors/refresh/extract.py selftest
+        run: node --check app.js && node check-catalog.mjs && python3 tools/extractors/refresh/extract.py selftest && python3 tools/extractors/photos/extract.py selftest
