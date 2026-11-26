@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below and keep the CC BY 4.0 attribution."
+title: "Conference Guide: open data on recurring conferences in India and worldwide"
+type: dataset
+authors:
+  - alias: omshivaprakash
+repository-code: "https://github.com/omshivaprakash/conference-guide"
+url: "https://omshivaprakash.github.io/conference-guide/"
+license: CC-BY-4.0
+version: "2026.11.26"
+date-released: "2026-11-26"
+keywords:
+  - conferences
+  - India
+  - academic conferences
+  - open data

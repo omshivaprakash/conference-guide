@@ -1,0 +1,449 @@
+{
+ "about": "Conference Guide catalogue. Hand-listed recurring conferences in India and worldwide. Months are the usual month and can move; the official site is the final word. Fields are described in README.md.",
+ "updated": "2026-11-26",
+ "streams": [
+  {
+   "id": "tech",
+   "name": "Technology",
+   "icon": "⌘"
+  },
+  {
+   "id": "ai",
+   "name": "AI and data",
+   "icon": "◇"
+  },
+  {
+   "id": "security",
+   "name": "Cybersecurity",
+   "icon": "⛨"
+  },
+  {
+   "id": "science",
+   "name": "Science",
+   "icon": "⚛"
+  },
+  {
+   "id": "medicine",
+   "name": "Medicine and health",
+   "icon": "✚"
+  },
+  {
+   "id": "business",
+   "name": "Business and startups",
+   "icon": "₹"
+  },
+  {
+   "id": "design",
+   "name": "Design",
+   "icon": "✎"
+  },
+  {
+   "id": "climate",
+   "name": "Climate and energy",
+   "icon": "☘"
+  },
+  {
+   "id": "policy",
+   "name": "Policy and society",
+   "icon": "⚖"
+  },
+  {
+   "id": "humanities",
+   "name": "Humanities and social sciences",
+   "icon": "❡"
+  },
+  {
+   "id": "education",
+   "name": "Education",
+   "icon": "✐"
+  },
+  {
+   "id": "engineering",
+   "name": "Engineering and space",
+   "icon": "✈"
+  }
+ ],
+ "places": {
+  "Bengaluru": [
+   77.59,
+   12.97
+  ],
+  "New Delhi": [
+   77.21,
+   28.61
+  ],
+  "Mumbai": [
+   72.88,
+   19.08
+  ],
+  "Hyderabad": [
+   78.49,
+   17.39
+  ],
+  "Goa": [
+   73.83,
+   15.49
+  ],
+  "Kochi": [
+   76.27,
+   9.93
+  ],
+  "Gandhinagar": [
+   72.64,
+   23.22
+  ],
+  "Greater Noida": [
+   77.5,
+   28.47
+  ],
+  "Las Vegas": [
+   -115.14,
+   36.17
+  ],
+  "San Francisco": [
+   -122.42,
+   37.77
+  ],
+  "San Jose": [
+   -121.89,
+   37.34
+  ],
+  "Santa Clara": [
+   -121.96,
+   37.35
+  ],
+  "Mountain View": [
+   -122.08,
+   37.39
+  ],
+  "Cupertino": [
+   -122.03,
+   37.32
+  ],
+  "Seattle": [
+   -122.33,
+   47.61
+  ],
+  "Austin": [
+   -97.74,
+   30.27
+  ],
+  "New York": [
+   -74.01,
+   40.71
+  ],
+  "Washington, DC": [
+   -77.04,
+   38.91
+  ],
+  "Chicago": [
+   -87.63,
+   41.88
+  ],
+  "Beverly Hills": [
+   -118.4,
+   34.07
+  ],
+  "Aspen": [
+   -106.82,
+   39.19
+  ],
+  "Colorado Springs": [
+   -104.82,
+   38.83
+  ],
+  "San Diego": [
+   -117.16,
+   32.72
+  ],
+  "Barcelona": [
+   2.17,
+   41.39
+  ],
+  "Lisbon": [
+   -9.14,
+   38.72
+  ],
+  "Berlin": [
+   13.4,
+   52.52
+  ],
+  "Hamburg": [
+   9.99,
+   53.55
+  ],
+  "Hannover": [
+   9.73,
+   52.37
+  ],
+  "Munich": [
+   11.58,
+   48.14
+  ],
+  "Düsseldorf": [
+   6.77,
+   51.23
+  ],
+  "Lindau": [
+   9.68,
+   47.55
+  ],
+  "Paris": [
+   2.35,
+   48.86
+  ],
+  "Cannes": [
+   7.02,
+   43.55
+  ],
+  "Brussels": [
+   4.35,
+   50.85
+  ],
+  "Vienna": [
+   16.37,
+   48.21
+  ],
+  "Helsinki": [
+   24.94,
+   60.17
+  ],
+  "London": [
+   -0.13,
+   51.51
+  ],
+  "Oxford": [
+   -1.26,
+   51.75
+  ],
+  "Farnborough": [
+   -0.75,
+   51.29
+  ],
+  "Milan": [
+   9.19,
+   45.46
+  ],
+  "Eindhoven": [
+   5.47,
+   51.44
+  ],
+  "Geneva": [
+   6.14,
+   46.2
+  ],
+  "Davos": [
+   9.84,
+   46.8
+  ],
+  "Bonn": [
+   7.1,
+   50.73
+  ],
+  "Stockholm": [
+   18.07,
+   59.33
+  ],
+  "Taipei": [
+   121.56,
+   25.03
+  ],
+  "Singapore": [
+   103.82,
+   1.35
+  ],
+  "Shanghai": [
+   121.47,
+   31.23
+  ],
+  "Boao": [
+   110.58,
+   19.16
+  ],
+  "Dubai": [
+   55.27,
+   25.2
+  ],
+  "Abu Dhabi": [
+   54.37,
+   24.45
+  ],
+  "Riyadh": [
+   46.68,
+   24.71
+  ],
+  "Doha": [
+   51.53,
+   25.29
+  ],
+  "Cape Town": [
+   18.42,
+   -33.92
+  ],
+  "Nairobi": [
+   36.82,
+   -1.29
+  ]
+ },
+"conferences": [
+{"id": "bts", "name": "Bengaluru Tech Summit", "short": "BTS", "streams": ["tech", "business"], "city": "Bengaluru", "country": "India", "region": "India", "month": "November", "every": "Annual", "since": 1998, "org": "Government of Karnataka", "url": "https://www.bengalurutechsummit.com", "desc": "Karnataka's flagship technology event, covering IT, deep tech, biotech and startups, with an expo and policy sessions."},
+{"id": "imc", "name": "India Mobile Congress", "short": "IMC", "streams": ["tech"], "city": "New Delhi", "country": "India", "region": "India", "month": "October", "every": "Annual", "since": 2017, "org": "Department of Telecommunications and COAI", "url": "https://www.indiamobilecongress.com", "desc": "Asia's large telecom, media and technology forum, with launches from operators and handset makers."},
+{"id": "ntlf", "name": "Nasscom Technology and Leadership Forum", "short": "NTLF", "streams": ["tech", "business"], "city": "Mumbai", "country": "India", "region": "India", "month": "February", "every": "Annual", "since": 1992, "org": "Nasscom", "url": "https://nasscom.in/ntlf", "desc": "The Indian IT industry's leadership gathering, on services, products and the policy that shapes them."},
+{"id": "pyconin", "name": "PyCon India", "short": "PyCon IN", "streams": ["tech"], "city": null, "country": "India", "region": "India", "month": "September", "every": "Annual, host city changes", "since": 2009, "org": "Python India community", "url": "https://in.pycon.org", "desc": "The volunteer-run national conference for the Python programming language, with talks, workshops and sprints."},
+{"id": "indiafoss", "name": "IndiaFOSS", "short": "IndiaFOSS", "streams": ["tech"], "city": "Bengaluru", "country": "India", "region": "India", "month": "September", "every": "Annual", "since": 2020, "org": "FOSS United", "url": "https://fossunited.org/indiafoss", "desc": "India's community conference on free and open source software and the people who build it."},
+{"id": "fifthel", "name": "The Fifth Elephant", "short": "Fifth Elephant", "streams": ["ai", "tech"], "city": "Bengaluru", "country": "India", "region": "India", "month": "July", "every": "Annual", "since": 2012, "org": "Hasgeek", "url": "https://hasgeek.com/fifthelephant", "desc": "Practitioner conference on data engineering, machine learning and AI in production."},
+{"id": "semiconin", "name": "SEMICON India", "short": "SEMICON India", "streams": ["engineering", "tech"], "city": "New Delhi", "country": "India", "region": "India", "month": "September", "every": "Annual", "since": 2022, "org": "SEMI and India Semiconductor Mission", "url": "https://www.semiconindia.org", "desc": "Semiconductor manufacturing and design conference and expo, tied to India's chip programme."},
+{"id": "gff", "name": "Global Fintech Fest", "short": "GFF", "streams": ["business", "tech"], "city": "Mumbai", "country": "India", "region": "India", "month": "August to October", "every": "Annual", "since": 2020, "org": "Payments Council of India, NPCI and Fintech Convergence Council", "url": "https://www.globalfintechfest.com", "desc": "One of the world's largest fintech gatherings, on payments, digital public infrastructure and banking."},
+{"id": "techsparks", "name": "TechSparks", "short": "TechSparks", "streams": ["business", "tech"], "city": "Bengaluru", "country": "India", "region": "India", "month": "October to November", "every": "Annual", "since": 2010, "org": "YourStory", "url": "https://yourstory.com/techsparks", "desc": "Startup and tech summit bringing founders, investors and policymakers together."},
+{"id": "mahakumbh", "name": "Startup Mahakumbh", "short": "Startup Mahakumbh", "streams": ["business"], "city": "New Delhi", "country": "India", "region": "India", "month": "March to April", "every": "Annual", "since": 2024, "org": "Startup India and industry bodies", "desc": "National startup gathering with pavilions by sector, investor meetings and state showcases."},
+{"id": "vgs", "name": "Vibrant Gujarat Global Summit", "short": "Vibrant Gujarat", "streams": ["business", "policy"], "city": "Gandhinagar", "country": "India", "region": "India", "month": "January", "every": "Every two years", "since": 2003, "org": "Government of Gujarat", "url": "https://www.vibrantgujarat.com", "desc": "Investment summit where companies and countries announce projects in Gujarat."},
+{"id": "nullcon", "name": "Nullcon", "short": "Nullcon", "streams": ["security"], "city": "Goa", "country": "India", "region": "India", "month": "February to March", "every": "Annual", "since": 2010, "org": "null community", "url": "https://nullcon.net", "desc": "India's best-known hacker and security research conference, with trainings and a CTF."},
+{"id": "c0c0n", "name": "c0c0n", "short": "c0c0n", "streams": ["security", "policy"], "city": "Kochi", "country": "India", "region": "India", "month": "October", "every": "Annual", "since": 2008, "org": "Kerala Police and ISRA", "desc": "Cybersecurity and cybercrime conference that brings police, researchers and industry together.", "url": "https://c0c0n.org"},
+{"id": "comsnets", "name": "International Conference on COMmunication Systems and NETworkS", "short": "COMSNETS", "streams": ["tech", "science"], "city": "Bengaluru", "country": "India", "region": "India", "month": "January", "every": "Annual", "since": 2009, "org": "COMSNETS Association", "url": "https://www.comsnets.org", "desc": "Peer-reviewed research conference on networking and communication systems."},
+{"id": "codscomad", "name": "CODS-COMAD", "short": "CODS-COMAD", "streams": ["ai", "science"], "city": null, "country": "India", "region": "India", "month": "December to January", "every": "Annual, host city changes", "since": 2018, "org": "ACM India and IKDD", "url": "https://cods-comad.in", "desc": "India's main research conference on data science and the management of data."},
+{"id": "hipc", "name": "IEEE International Conference on High Performance Computing, Data and Analytics", "short": "HiPC", "streams": ["tech", "science"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "since": 1994, "org": "IEEE and HiPC", "url": "https://www.hipc.org", "desc": "Research conference on supercomputing, parallel systems and large-scale data."},
+{"id": "fsttcs", "name": "Foundations of Software Technology and Theoretical Computer Science", "short": "FSTTCS", "streams": ["science", "tech"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "since": 1981, "org": "IARCS", "url": "https://www.fsttcs.org.in", "desc": "India's oldest computer science research conference, on theory and formal methods."},
+{"id": "isec", "name": "India Software Engineering Conference", "short": "ISEC", "streams": ["tech", "science"], "city": null, "country": "India", "region": "India", "month": "February", "every": "Annual, host city changes", "since": 2008, "org": "ACM India", "desc": "Research conference on how software is built, tested and maintained."},
+{"id": "aeroindia", "name": "Aero India", "short": "Aero India", "streams": ["engineering", "business"], "city": "Bengaluru", "country": "India", "region": "India", "month": "February", "every": "Every two years, odd years", "since": 1996, "org": "Ministry of Defence", "url": "https://aeroindia.gov.in", "desc": "Asia's large aerospace and defence show, with flying displays at Yelahanka air base."},
+{"id": "bmge", "name": "Bharat Mobility Global Expo", "short": "Bharat Mobility", "streams": ["engineering", "business"], "city": "New Delhi", "country": "India", "region": "India", "month": "January to February", "every": "Every year or two (2024, 2025, 2027)", "since": 2024, "org": "Engineering Export Promotion Council and industry bodies", "url": "https://www.bharat-mobility.com", "desc": "Mobility expo spanning cars, batteries, components and transport tech, now including the Auto Expo."},
+{"id": "isc", "name": "Indian Science Congress", "short": "ISC", "streams": ["science"], "city": null, "country": "India", "region": "India", "month": "January", "every": "Annual, host city changes", "since": 1914, "org": "Indian Science Congress Association", "url": "https://sciencecongress.nic.in", "desc": "India's oldest science gathering. Recent sessions have been postponed, so check before planning."},
+{"id": "iisf", "name": "India International Science Festival", "short": "IISF", "streams": ["science", "education"], "city": null, "country": "India", "region": "India", "month": "November to January", "every": "Annual, host city changes", "since": 2015, "org": "Ministry of Science and Technology and Vijnana Bharati", "url": "https://www.scienceindiafest.org", "desc": "Science festival with conferences for researchers, students and the public."},
+{"id": "iasmeet", "name": "Indian Academy of Sciences Annual Meeting", "short": "IASc meeting", "streams": ["science"], "city": null, "country": "India", "region": "India", "month": "November", "every": "Annual, host city changes", "since": 1934, "org": "Indian Academy of Sciences", "url": "https://www.ias.ac.in", "desc": "Fellows' meeting with lectures across the sciences, open to students and teachers."},
+{"id": "asi", "name": "Astronomical Society of India Annual Meeting", "short": "ASI meeting", "streams": ["science"], "city": null, "country": "India", "region": "India", "month": "January to March", "every": "Annual, host city changes", "since": 1972, "org": "Astronomical Society of India", "url": "https://astron-soc.in", "desc": "The national meeting for India's astronomers and astrophysicists."},
+{"id": "apicon", "name": "APICON", "short": "APICON", "streams": ["medicine"], "city": null, "country": "India", "region": "India", "month": "January", "every": "Annual, host city changes", "org": "Association of Physicians of India", "url": "https://www.apiindia.org", "desc": "The annual conference of India's physicians in internal medicine."},
+{"id": "csi", "name": "Cardiological Society of India Annual Conference", "short": "CSI", "streams": ["medicine"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "org": "Cardiological Society of India", "url": "https://www.csi.org.in", "desc": "India's largest cardiology meeting."},
+{"id": "aioc", "name": "All India Ophthalmological Conference", "short": "AIOC", "streams": ["medicine"], "city": null, "country": "India", "region": "India", "month": "February to March", "every": "Annual, host city changes", "org": "All India Ophthalmological Society", "url": "https://aios.org", "desc": "One of the world's largest eye care conferences."},
+{"id": "aicog", "name": "All India Congress of Obstetrics and Gynaecology", "short": "AICOG", "streams": ["medicine"], "city": null, "country": "India", "region": "India", "month": "January", "every": "Annual, host city changes", "org": "FOGSI", "url": "https://www.fogsi.org", "desc": "The national congress for obstetricians and gynaecologists."},
+{"id": "pedicon", "name": "PEDICON", "short": "PEDICON", "streams": ["medicine"], "city": null, "country": "India", "region": "India", "month": "January", "every": "Annual, host city changes", "org": "Indian Academy of Pediatrics", "url": "https://iapindia.org", "desc": "The national conference on child health."},
+{"id": "ancips", "name": "Annual National Conference of the Indian Psychiatric Society", "short": "ANCIPS", "streams": ["medicine"], "city": null, "country": "India", "region": "India", "month": "January", "every": "Annual, host city changes", "org": "Indian Psychiatric Society", "url": "https://indianpsychiatricsociety.org", "desc": "India's main mental health conference."},
+{"id": "asicon", "name": "ASICON", "short": "ASICON", "streams": ["medicine"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "org": "Association of Surgeons of India", "url": "https://asiindia.org", "desc": "The annual conference of India's surgeons."},
+{"id": "bioasia", "name": "BioAsia", "short": "BioAsia", "streams": ["medicine", "business"], "city": "Hyderabad", "country": "India", "region": "India", "month": "February", "every": "Annual", "since": 2004, "org": "Government of Telangana", "url": "https://bioasia.in", "desc": "Life sciences and pharma forum in India's vaccine and drug-making hub."},
+{"id": "cphiin", "name": "CPHI and PMEC India", "short": "CPHI India", "streams": ["medicine", "business"], "city": "Greater Noida", "country": "India", "region": "India", "month": "November", "every": "Annual", "org": "Informa Markets", "url": "https://www.cphi.com/india", "desc": "Pharmaceutical ingredients and machinery expo with a conference track."},
+{"id": "idid", "name": "India Design ID", "short": "India Design", "streams": ["design"], "city": "New Delhi", "country": "India", "region": "India", "month": "February", "every": "Annual", "since": 2014, "org": "Media Transasia", "url": "https://indiadesignid.com", "desc": "Design and interiors week with talks, showrooms and new Indian studios."},
+{"id": "uxindia", "name": "UXINDIA", "short": "UXINDIA", "streams": ["design"], "city": null, "country": "India", "region": "India", "month": "September", "every": "Annual, host city changes", "since": 2005, "org": "UXINDIA", "url": "https://ux-india.org", "desc": "Long-running user experience conference with workshops and talks."},
+{"id": "iew", "name": "India Energy Week", "short": "IEW", "streams": ["climate", "business"], "city": "Goa", "country": "India", "region": "India", "month": "January to February", "every": "Annual", "since": 2023, "org": "Ministry of Petroleum and Natural Gas", "url": "https://www.indiaenergyweek.com", "desc": "Energy summit and expo on oil, gas, hydrogen and the energy transition. The host city has moved between Goa and New Delhi."},
+{"id": "wsds", "name": "World Sustainable Development Summit", "short": "WSDS", "streams": ["climate", "policy"], "city": "New Delhi", "country": "India", "region": "India", "month": "February to March", "every": "Annual", "since": 2001, "org": "TERI", "url": "https://wsds.teriin.org", "desc": "TERI's summit on climate, sustainability and development, from the Global South."},
+{"id": "raisina", "name": "Raisina Dialogue", "short": "Raisina", "streams": ["policy"], "city": "New Delhi", "country": "India", "region": "India", "month": "February to March", "every": "Annual", "since": 2016, "org": "Observer Research Foundation and Ministry of External Affairs", "url": "https://www.orfonline.org/raisina-dialogue", "desc": "India's flagship conference on geopolitics and geoeconomics."},
+{"id": "kec", "name": "Kautilya Economic Conclave", "short": "Kautilya", "streams": ["policy", "business"], "city": "New Delhi", "country": "India", "region": "India", "month": "October", "every": "Annual", "since": 2022, "org": "Institute of Economic Growth and Ministry of Finance", "desc": "Economic policy conference on growth and the Global South."},
+{"id": "itconclave", "name": "India Today Conclave", "short": "India Today Conclave", "streams": ["policy", "business"], "city": "New Delhi", "country": "India", "region": "India", "month": "March", "every": "Annual", "since": 2002, "org": "India Today Group", "desc": "Ideas conference with political leaders, business heads and cultural figures."},
+{"id": "ihc", "name": "Indian History Congress", "short": "IHC", "streams": ["humanities"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "since": 1935, "org": "Indian History Congress", "url": "https://www.indianhistorycongress.org", "desc": "India's largest gathering of historians."},
+{"id": "iea", "name": "Indian Economic Association Annual Conference", "short": "IEA", "streams": ["humanities", "policy"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "since": 1917, "org": "Indian Economic Association", "desc": "The national conference of India's economists."},
+{"id": "aisc", "name": "All India Sociological Conference", "short": "AISC", "streams": ["humanities"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "org": "Indian Sociological Society", "url": "https://www.insoso.org", "desc": "The annual conference of the Indian Sociological Society."},
+{"id": "iec", "name": "Indian Engineering Congress", "short": "IEC", "streams": ["engineering"], "city": null, "country": "India", "region": "India", "month": "December", "every": "Annual, host city changes", "since": 1986, "org": "The Institution of Engineers (India)", "url": "https://www.ieindia.org", "desc": "Engineering congress across civil, mechanical, electrical and newer disciplines."},
+{"id": "ces", "name": "CES", "short": "CES", "streams": ["tech", "business"], "city": "Las Vegas", "country": "United States", "region": "North America", "month": "January", "every": "Annual", "since": 1967, "org": "Consumer Technology Association", "url": "https://www.ces.tech", "desc": "The world's largest consumer technology show, where gadgets and chips for the year are unveiled."},
+{"id": "mwc", "name": "MWC Barcelona", "short": "MWC", "streams": ["tech"], "city": "Barcelona", "country": "Spain", "region": "Europe", "month": "February to March", "every": "Annual", "since": 1987, "org": "GSMA", "url": "https://www.mwcbarcelona.com", "desc": "The mobile and telecom industry's main annual show."},
+{"id": "websummit", "name": "Web Summit", "short": "Web Summit", "streams": ["tech", "business"], "city": "Lisbon", "country": "Portugal", "region": "Europe", "month": "November", "every": "Annual", "since": 2009, "org": "Web Summit", "url": "https://websummit.com", "desc": "Huge tech and startup conference with founders, investors and policymakers."},
+{"id": "sxsw", "name": "SXSW", "short": "SXSW", "streams": ["tech", "design", "business"], "city": "Austin", "country": "United States", "region": "North America", "month": "March", "every": "Annual", "since": 1987, "org": "SXSW", "url": "https://www.sxsw.com", "desc": "Festival and conference where technology, film, music and culture overlap."},
+{"id": "gio", "name": "Google I/O", "short": "I/O", "streams": ["tech", "ai"], "city": "Mountain View", "country": "United States", "region": "North America", "month": "May", "every": "Annual", "since": 2008, "org": "Google", "url": "https://io.google", "desc": "Google's developer conference, with Android, web and AI announcements."},
+{"id": "wwdc", "name": "Apple Worldwide Developers Conference", "short": "WWDC", "streams": ["tech"], "city": "Cupertino", "country": "United States", "region": "North America", "month": "June", "every": "Annual", "since": 1987, "org": "Apple", "url": "https://developer.apple.com/wwdc", "desc": "Apple's developer conference, where the next versions of its operating systems are shown."},
+{"id": "build", "name": "Microsoft Build", "short": "Build", "streams": ["tech", "ai"], "city": "Seattle", "country": "United States", "region": "North America", "month": "May", "every": "Annual", "since": 2011, "org": "Microsoft", "url": "https://build.microsoft.com", "desc": "Microsoft's developer conference on Windows, Azure and AI tools."},
+{"id": "reinvent", "name": "AWS re:Invent", "short": "re:Invent", "streams": ["tech"], "city": "Las Vegas", "country": "United States", "region": "North America", "month": "December", "every": "Annual", "since": 2012, "org": "Amazon Web Services", "url": "https://reinvent.awsevents.com", "desc": "The largest cloud computing conference, with AWS product launches."},
+{"id": "kubecon", "name": "KubeCon + CloudNativeCon", "short": "KubeCon", "streams": ["tech"], "city": null, "country": null, "region": "Worldwide", "month": "March to April (Europe), November (North America)", "every": "Several a year, including India", "since": 2015, "org": "Cloud Native Computing Foundation", "url": "https://www.cncf.io/kubecon-cloudnativecon-events/", "desc": "The Kubernetes and cloud native community conference, held in Europe, North America, India and elsewhere."},
+{"id": "computex", "name": "Computex", "short": "Computex", "streams": ["tech", "engineering"], "city": "Taipei", "country": "Taiwan", "region": "Asia", "month": "May to June", "every": "Annual", "since": 1981, "org": "TAITRA", "url": "https://www.computextaipei.com.tw", "desc": "Asia's main computer hardware show, where PC and chip makers launch products."},
+{"id": "ifa", "name": "IFA Berlin", "short": "IFA", "streams": ["tech"], "city": "Berlin", "country": "Germany", "region": "Europe", "month": "September", "every": "Annual", "since": 1924, "org": "IFA Management", "url": "https://www.ifa-berlin.com", "desc": "Long-running consumer electronics and home appliance show."},
+{"id": "gitex", "name": "GITEX Global", "short": "GITEX", "streams": ["tech", "business"], "city": "Dubai", "country": "United Arab Emirates", "region": "Middle East", "month": "October", "every": "Annual", "since": 1981, "org": "Dubai World Trade Centre", "url": "https://www.gitex.com", "desc": "Large technology show with startup, AI and government tracks."},
+{"id": "slush", "name": "Slush", "short": "Slush", "streams": ["business", "tech"], "city": "Helsinki", "country": "Finland", "region": "Europe", "month": "November to December", "every": "Annual", "since": 2008, "org": "Slush", "url": "https://slush.org", "desc": "Student-run startup event that connects founders with investors."},
+{"id": "vivatech", "name": "VivaTech", "short": "VivaTech", "streams": ["tech", "business"], "city": "Paris", "country": "France", "region": "Europe", "month": "June", "every": "Annual", "since": 2016, "org": "Publicis Groupe and Les Echos", "url": "https://vivatechnology.com", "desc": "Europe's large startup and technology event."},
+{"id": "fosdem", "name": "FOSDEM", "short": "FOSDEM", "streams": ["tech"], "city": "Brussels", "country": "Belgium", "region": "Europe", "month": "February", "every": "Annual", "since": 2000, "org": "FOSDEM volunteers", "url": "https://fosdem.org", "desc": "Free, volunteer-run weekend of open source talks, with no registration."},
+{"id": "pyconus", "name": "PyCon US", "short": "PyCon US", "streams": ["tech"], "city": null, "country": "United States", "region": "North America", "month": "May", "every": "Annual, host city changes", "since": 2003, "org": "Python Software Foundation", "url": "https://us.pycon.org", "desc": "The largest Python conference, with tutorials, talks and sprints."},
+{"id": "gdc", "name": "Game Developers Conference", "short": "GDC", "streams": ["tech", "design"], "city": "San Francisco", "country": "United States", "region": "North America", "month": "March", "every": "Annual", "since": 1988, "org": "Informa", "url": "https://gdconf.com", "desc": "The video game industry's professional conference."},
+{"id": "siggraph", "name": "SIGGRAPH", "short": "SIGGRAPH", "streams": ["tech", "design", "science"], "city": null, "country": null, "region": "Worldwide", "month": "July to August", "every": "Annual, mostly in North America; SIGGRAPH Asia in December", "since": 1974, "org": "ACM SIGGRAPH", "url": "https://www.siggraph.org", "desc": "Computer graphics and interactive techniques, from research papers to film effects."},
+{"id": "chi", "name": "ACM CHI Conference on Human Factors in Computing Systems", "short": "CHI", "streams": ["design", "science"], "city": null, "country": null, "region": "Worldwide", "month": "April to May", "every": "Annual, host city changes", "since": 1982, "org": "ACM SIGCHI", "url": "https://chi.acm.org", "desc": "The top research conference on human-computer interaction."},
+{"id": "icse", "name": "International Conference on Software Engineering", "short": "ICSE", "streams": ["tech", "science"], "city": null, "country": null, "region": "Worldwide", "month": "April to May", "every": "Annual, host city changes", "since": 1975, "org": "ACM and IEEE Computer Society", "url": "https://conf.researchr.org/series/icse", "desc": "The flagship research conference on software engineering."},
+{"id": "neurips", "name": "Conference on Neural Information Processing Systems", "short": "NeurIPS", "streams": ["ai", "science"], "city": null, "country": null, "region": "Worldwide", "month": "December", "every": "Annual, host city changes", "since": 1987, "org": "NeurIPS Foundation", "url": "https://neurips.cc", "desc": "The largest machine learning research conference."},
+{"id": "icml", "name": "International Conference on Machine Learning", "short": "ICML", "streams": ["ai", "science"], "city": null, "country": null, "region": "Worldwide", "month": "July", "every": "Annual, host city changes", "since": 1980, "org": "International Machine Learning Society", "url": "https://icml.cc", "desc": "One of the leading machine learning research conferences."},
+{"id": "iclr", "name": "International Conference on Learning Representations", "short": "ICLR", "streams": ["ai", "science"], "city": null, "country": null, "region": "Worldwide", "month": "April to May", "every": "Annual, host city changes", "since": 2013, "org": "ICLR", "url": "https://iclr.cc", "desc": "Deep learning research conference with open peer review."},
+{"id": "cvpr", "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition", "short": "CVPR", "streams": ["ai", "science"], "city": null, "country": "United States", "region": "North America", "month": "June", "every": "Annual, host city changes", "since": 1983, "org": "IEEE Computer Society and CVF", "url": "https://cvpr.thecvf.com", "desc": "The top computer vision research conference."},
+{"id": "acl", "name": "Annual Meeting of the Association for Computational Linguistics", "short": "ACL", "streams": ["ai", "science", "humanities"], "city": null, "country": null, "region": "Worldwide", "month": "July to August", "every": "Annual, host city changes", "since": 1963, "org": "Association for Computational Linguistics", "url": "https://www.aclweb.org", "desc": "The main research conference on natural language processing."},
+{"id": "aaai", "name": "AAAI Conference on Artificial Intelligence", "short": "AAAI", "streams": ["ai", "science"], "city": null, "country": null, "region": "Worldwide", "month": "February", "every": "Annual, host city changes", "since": 1980, "org": "Association for the Advancement of Artificial Intelligence", "url": "https://aaai.org", "desc": "Broad AI research conference across reasoning, learning and applications."},
+{"id": "kdd", "name": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining", "short": "KDD", "streams": ["ai", "science"], "city": null, "country": null, "region": "Worldwide", "month": "August", "every": "Annual, host city changes", "since": 1995, "org": "ACM SIGKDD", "url": "https://kdd.org", "desc": "The leading data mining and applied data science conference."},
+{"id": "ijcai", "name": "International Joint Conference on Artificial Intelligence", "short": "IJCAI", "streams": ["ai", "science"], "city": null, "country": null, "region": "Worldwide", "month": "August", "every": "Annual, host city changes", "since": 1969, "org": "IJCAI Organization", "url": "https://www.ijcai.org", "desc": "One of the oldest AI research conferences."},
+{"id": "gtc", "name": "NVIDIA GTC", "short": "GTC", "streams": ["ai", "tech"], "city": "San Jose", "country": "United States", "region": "North America", "month": "March", "every": "Annual, with regional editions", "since": 2009, "org": "NVIDIA", "url": "https://www.nvidia.com/gtc/", "desc": "NVIDIA's conference on GPUs, accelerated computing and AI."},
+{"id": "waic", "name": "World Artificial Intelligence Conference", "short": "WAIC", "streams": ["ai", "policy"], "city": "Shanghai", "country": "China", "region": "Asia", "month": "July", "every": "Annual", "since": 2018, "org": "Shanghai Municipal Government", "url": "https://www.worldaic.com.cn", "desc": "China's largest AI conference and exhibition."},
+{"id": "defcon", "name": "DEF CON", "short": "DEF CON", "streams": ["security"], "city": "Las Vegas", "country": "United States", "region": "North America", "month": "August", "every": "Annual", "since": 1993, "org": "DEF CON", "url": "https://defcon.org", "desc": "The world's best-known hacker convention, with villages and contests."},
+{"id": "blackhat", "name": "Black Hat USA", "short": "Black Hat", "streams": ["security"], "city": "Las Vegas", "country": "United States", "region": "North America", "month": "August", "every": "Annual, with regional editions", "since": 1997, "org": "Informa", "url": "https://www.blackhat.com", "desc": "Security research briefings and trainings for professionals."},
+{"id": "rsac", "name": "RSAC Conference", "short": "RSAC", "streams": ["security", "business"], "city": "San Francisco", "country": "United States", "region": "North America", "month": "April to May", "every": "Annual", "since": 1991, "org": "RSAC", "url": "https://www.rsaconference.com", "desc": "The cybersecurity industry's largest conference and expo."},
+{"id": "ccc", "name": "Chaos Communication Congress", "short": "CCC", "streams": ["security", "policy"], "city": "Hamburg", "country": "Germany", "region": "Europe", "month": "December", "every": "Annual", "since": 1984, "org": "Chaos Computer Club", "url": "https://events.ccc.de", "desc": "Hacker congress on security, privacy and technology in society, held between Christmas and New Year."},
+{"id": "usenixsec", "name": "USENIX Security Symposium", "short": "USENIX Security", "streams": ["security", "science"], "city": null, "country": "United States", "region": "North America", "month": "August", "every": "Annual, host city changes", "since": 1990, "org": "USENIX", "url": "https://www.usenix.org/conferences", "desc": "Leading academic security research conference."},
+{"id": "aaas", "name": "AAAS Annual Meeting", "short": "AAAS", "streams": ["science", "policy"], "city": null, "country": "United States", "region": "North America", "month": "February", "every": "Annual, host city changes", "since": 1848, "org": "American Association for the Advancement of Science", "url": "https://www.aaas.org", "desc": "Broad science meeting across disciplines, with public sessions."},
+{"id": "agu", "name": "AGU Annual Meeting", "short": "AGU", "streams": ["science", "climate"], "city": null, "country": "United States", "region": "North America", "month": "December", "every": "Annual, host city changes", "since": 1919, "org": "American Geophysical Union", "url": "https://www.agu.org", "desc": "The largest Earth and space science meeting."},
+{"id": "egu", "name": "EGU General Assembly", "short": "EGU", "streams": ["science", "climate"], "city": "Vienna", "country": "Austria", "region": "Europe", "month": "April", "every": "Annual", "since": 2004, "org": "European Geosciences Union", "url": "https://www.egu.eu", "desc": "Europe's main geosciences meeting."},
+{"id": "apsmm", "name": "APS Global Physics Summit (March Meeting)", "short": "APS March", "streams": ["science"], "city": null, "country": "United States", "region": "North America", "month": "March", "every": "Annual, host city changes", "org": "American Physical Society", "url": "https://www.aps.org", "desc": "The largest physics meeting, mostly condensed matter and materials."},
+{"id": "lindau", "name": "Lindau Nobel Laureate Meetings", "short": "Lindau", "streams": ["science", "medicine", "education"], "city": "Lindau", "country": "Germany", "region": "Europe", "month": "June to July", "every": "Annual, subject rotates", "since": 1951, "org": "Council for the Lindau Nobel Laureate Meetings", "url": "https://www.lindau-nobel.org", "desc": "Nobel laureates meet young scientists, by application, with Indian participants nominated through national bodies."},
+{"id": "sfn", "name": "Society for Neuroscience Annual Meeting", "short": "SfN", "streams": ["science", "medicine"], "city": null, "country": "United States", "region": "North America", "month": "November", "every": "Annual, host city changes", "since": 1971, "org": "Society for Neuroscience", "url": "https://www.sfn.org", "desc": "The largest neuroscience meeting."},
+{"id": "icm", "name": "International Congress of Mathematicians", "short": "ICM", "streams": ["science"], "city": null, "country": null, "region": "Worldwide", "month": "July", "every": "Every four years", "since": 1897, "org": "International Mathematical Union", "url": "https://www.mathunion.org/icm", "desc": "Mathematics' largest meeting, where the Fields Medals are awarded. Hyderabad hosted it in 2010."},
+{"id": "iauga", "name": "IAU General Assembly", "short": "IAU GA", "streams": ["science"], "city": null, "country": null, "region": "Worldwide", "month": "August", "every": "Every three years", "since": 1922, "org": "International Astronomical Union", "url": "https://www.iau.org", "desc": "The world assembly of astronomers."},
+{"id": "fallingwalls", "name": "Falling Walls Science Summit", "short": "Falling Walls", "streams": ["science", "policy"], "city": "Berlin", "country": "Germany", "region": "Europe", "month": "November", "every": "Annual", "since": 2009, "org": "Falling Walls Foundation", "url": "https://falling-walls.com", "desc": "Breakthroughs in science and society, held around 9 November."},
+{"id": "asco", "name": "ASCO Annual Meeting", "short": "ASCO", "streams": ["medicine"], "city": "Chicago", "country": "United States", "region": "North America", "month": "May to June", "every": "Annual", "since": 1965, "org": "American Society of Clinical Oncology", "url": "https://www.asco.org", "desc": "The largest cancer meeting, where major trial results are presented."},
+{"id": "esc", "name": "ESC Congress", "short": "ESC", "streams": ["medicine"], "city": null, "country": null, "region": "Europe", "month": "August to September", "every": "Annual, host city changes", "org": "European Society of Cardiology", "url": "https://www.escardio.org", "desc": "The world's largest cardiology congress."},
+{"id": "aha", "name": "AHA Scientific Sessions", "short": "AHA", "streams": ["medicine"], "city": null, "country": "United States", "region": "North America", "month": "November", "every": "Annual, host city changes", "org": "American Heart Association", "url": "https://professional.heart.org", "desc": "Cardiovascular science meeting with late-breaking trials."},
+{"id": "ada", "name": "ADA Scientific Sessions", "short": "ADA", "streams": ["medicine"], "city": null, "country": "United States", "region": "North America", "month": "June", "every": "Annual, host city changes", "org": "American Diabetes Association", "url": "https://professional.diabetes.org", "desc": "The main diabetes research meeting."},
+{"id": "esmo", "name": "ESMO Congress", "short": "ESMO", "streams": ["medicine"], "city": null, "country": null, "region": "Europe", "month": "September to October", "every": "Annual, host city changes", "org": "European Society for Medical Oncology", "url": "https://www.esmo.org", "desc": "Europe's main oncology congress."},
+{"id": "rsna", "name": "RSNA Annual Meeting", "short": "RSNA", "streams": ["medicine", "ai"], "city": "Chicago", "country": "United States", "region": "North America", "month": "November to December", "every": "Annual", "since": 1915, "org": "Radiological Society of North America", "url": "https://www.rsna.org", "desc": "The largest radiology meeting, with a growing AI showcase."},
+{"id": "wha", "name": "World Health Assembly", "short": "WHA", "streams": ["medicine", "policy"], "city": "Geneva", "country": "Switzerland", "region": "Europe", "month": "May", "every": "Annual", "since": 1948, "org": "World Health Organization", "url": "https://www.who.int", "desc": "The WHO's decision-making body, where health ministers set global health policy."},
+{"id": "whs", "name": "World Health Summit", "short": "WHS", "streams": ["medicine", "policy"], "city": "Berlin", "country": "Germany", "region": "Europe", "month": "October", "every": "Annual", "since": 2009, "org": "World Health Summit", "url": "https://www.worldhealthsummit.org", "desc": "Global health strategy forum with governments, researchers and industry."},
+{"id": "medica", "name": "MEDICA", "short": "MEDICA", "streams": ["medicine", "business"], "city": "Düsseldorf", "country": "Germany", "region": "Europe", "month": "November", "every": "Annual", "since": 1969, "org": "Messe Düsseldorf", "url": "https://www.medica-tradefair.com", "desc": "The world's largest medical technology trade fair."},
+{"id": "whx", "name": "WHX Dubai (formerly Arab Health)", "short": "WHX Dubai", "streams": ["medicine", "business"], "city": "Dubai", "country": "United Arab Emirates", "region": "Middle East", "month": "January to February", "every": "Annual", "since": 1975, "org": "Informa Markets", "url": "https://www.worldhealthexpo.com", "desc": "Large healthcare exhibition and conference for the Middle East and South Asia."},
+{"id": "aids", "name": "International AIDS Conference", "short": "AIDS", "streams": ["medicine", "policy"], "city": null, "country": null, "region": "Worldwide", "month": "July", "every": "Every two years, host city changes", "since": 1985, "org": "International AIDS Society", "url": "https://www.iasociety.org", "desc": "The largest conference on HIV and global health."},
+{"id": "bio", "name": "BIO International Convention", "short": "BIO", "streams": ["medicine", "business"], "city": null, "country": "United States", "region": "North America", "month": "June", "every": "Annual, host city changes", "since": 1993, "org": "Biotechnology Innovation Organization", "url": "https://www.bio.org", "desc": "Biotech industry's partnering convention."},
+{"id": "wef", "name": "World Economic Forum Annual Meeting", "short": "Davos", "streams": ["business", "policy"], "city": "Davos", "country": "Switzerland", "region": "Europe", "month": "January", "every": "Annual", "since": 1971, "org": "World Economic Forum", "url": "https://www.weforum.org", "desc": "Invitation-only meeting of political and business leaders, with sessions streamed online."},
+{"id": "imfwb", "name": "Annual Meetings of the IMF and World Bank", "short": "IMF/WB", "streams": ["business", "policy"], "city": "Washington, DC", "country": "United States", "region": "North America", "month": "October", "every": "Annual; two years in three in Washington", "since": 1946, "org": "IMF and World Bank Group", "url": "https://www.imf.org", "desc": "Finance ministers and central bankers meet on the world economy."},
+{"id": "milken", "name": "Milken Institute Global Conference", "short": "Milken", "streams": ["business", "policy"], "city": "Beverly Hills", "country": "United States", "region": "North America", "month": "May", "every": "Annual", "since": 1998, "org": "Milken Institute", "url": "https://milkeninstitute.org", "desc": "Finance and policy conference on capital, health and growth."},
+{"id": "sff", "name": "Singapore FinTech Festival", "short": "SFF", "streams": ["business", "tech"], "city": "Singapore", "country": "Singapore", "region": "Asia", "month": "November", "every": "Annual", "since": 2016, "org": "Monetary Authority of Singapore", "url": "https://www.fintechfestival.sg", "desc": "Large fintech event led by Singapore's central bank."},
+{"id": "money2020", "name": "Money20/20", "short": "Money20/20", "streams": ["business", "tech"], "city": "Las Vegas", "country": "United States", "region": "North America", "month": "October", "every": "Annual, with Europe and Middle East editions", "since": 2012, "org": "Ascential", "url": "https://www.money2020.com", "desc": "Payments and financial services conference."},
+{"id": "canneslions", "name": "Cannes Lions International Festival of Creativity", "short": "Cannes Lions", "streams": ["business", "design"], "city": "Cannes", "country": "France", "region": "Europe", "month": "June", "every": "Annual", "since": 1954, "org": "LIONS", "url": "https://www.canneslions.com", "desc": "The advertising and marketing world's festival and awards."},
+{"id": "dreamforce", "name": "Dreamforce", "short": "Dreamforce", "streams": ["business", "tech"], "city": "San Francisco", "country": "United States", "region": "North America", "month": "September to October", "every": "Annual", "since": 2003, "org": "Salesforce", "url": "https://www.salesforce.com/dreamforce/", "desc": "Salesforce's customer and developer conference."},
+{"id": "disrupt", "name": "TechCrunch Disrupt", "short": "Disrupt", "streams": ["business", "tech"], "city": "San Francisco", "country": "United States", "region": "North America", "month": "October", "every": "Annual", "since": 2010, "org": "TechCrunch", "url": "https://techcrunch.com/events/", "desc": "Startup conference known for its Startup Battlefield pitch contest."},
+{"id": "tiecon", "name": "TiEcon", "short": "TiEcon", "streams": ["business"], "city": "Santa Clara", "country": "United States", "region": "North America", "month": "April to May", "every": "Annual", "since": 1993, "org": "TiE Silicon Valley", "url": "https://tiecon.org", "desc": "Entrepreneurship conference founded by the Indian diaspora in Silicon Valley."},
+{"id": "fii", "name": "Future Investment Initiative", "short": "FII", "streams": ["business", "policy"], "city": "Riyadh", "country": "Saudi Arabia", "region": "Middle East", "month": "October", "every": "Annual", "since": 2017, "org": "FII Institute", "url": "https://fii-institute.org", "desc": "Investment forum hosted by Saudi Arabia's sovereign wealth fund."},
+{"id": "hannover", "name": "Hannover Messe", "short": "Hannover Messe", "streams": ["engineering", "business"], "city": "Hannover", "country": "Germany", "region": "Europe", "month": "April", "every": "Annual", "since": 1947, "org": "Deutsche Messe", "url": "https://www.hannovermesse.de", "desc": "The world's leading industrial technology fair, on automation, energy and manufacturing."},
+{"id": "salone", "name": "Salone del Mobile.Milano (Milan Design Week)", "short": "Salone", "streams": ["design"], "city": "Milan", "country": "Italy", "region": "Europe", "month": "April", "every": "Annual", "since": 1961, "org": "Salone del Mobile", "url": "https://www.salonemilano.it", "desc": "The world's main furniture and design fair, with the city-wide Fuorisalone."},
+{"id": "ddw", "name": "Dutch Design Week", "short": "DDW", "streams": ["design"], "city": "Eindhoven", "country": "Netherlands", "region": "Europe", "month": "October", "every": "Annual", "since": 2002, "org": "Dutch Design Foundation", "url": "https://ddw.nl", "desc": "Northern Europe's largest design event, strong on young designers."},
+{"id": "ldf", "name": "London Design Festival", "short": "LDF", "streams": ["design"], "city": "London", "country": "United Kingdom", "region": "Europe", "month": "September", "every": "Annual", "since": 2003, "org": "London Design Festival", "url": "https://www.londondesignfestival.com", "desc": "City-wide design festival with talks, installations and trade shows."},
+{"id": "config", "name": "Config", "short": "Config", "streams": ["design", "tech"], "city": "San Francisco", "country": "United States", "region": "North America", "month": "May", "every": "Annual", "since": 2020, "org": "Figma", "url": "https://config.figma.com", "desc": "Figma's conference on product design and design systems."},
+{"id": "adobemax", "name": "Adobe MAX", "short": "MAX", "streams": ["design"], "city": null, "country": "United States", "region": "North America", "month": "October", "every": "Annual, with regional editions", "org": "Adobe", "url": "https://max.adobe.com", "desc": "Adobe's creativity conference, with sessions free to stream."},
+{"id": "designindaba", "name": "Design Indaba", "short": "Design Indaba", "streams": ["design"], "city": "Cape Town", "country": "South Africa", "region": "Africa", "month": "February to March", "every": "Annual", "since": 1995, "org": "Design Indaba", "url": "https://www.designindaba.com", "desc": "Creativity conference from Africa with designers and artists from around the world."},
+{"id": "offf", "name": "OFFF Barcelona", "short": "OFFF", "streams": ["design"], "city": "Barcelona", "country": "Spain", "region": "Europe", "month": "May", "every": "Annual", "since": 2001, "org": "OFFF", "url": "https://offf.barcelona", "desc": "Festival of digital creativity, motion and graphic design."},
+{"id": "interaction", "name": "Interaction", "short": "Interaction", "streams": ["design"], "city": null, "country": null, "region": "Worldwide", "month": "February to March", "every": "Annual, host city changes", "since": 2008, "org": "Interaction Design Association (IxDA)", "url": "https://interaction.ixda.org", "desc": "The interaction design community's annual conference."},
+{"id": "cop", "name": "UN Climate Change Conference (COP)", "short": "COP", "streams": ["climate", "policy"], "city": null, "country": null, "region": "Worldwide", "month": "November", "every": "Annual, host country changes", "since": 1995, "org": "UNFCCC", "url": "https://unfccc.int", "desc": "Where countries negotiate global climate action. New Delhi hosted COP8 in 2002."},
+{"id": "sb", "name": "Bonn Climate Change Conference", "short": "SB", "streams": ["climate", "policy"], "city": "Bonn", "country": "Germany", "region": "Europe", "month": "June", "every": "Annual", "org": "UNFCCC", "url": "https://unfccc.int", "desc": "Mid-year technical climate negotiations that prepare the COP."},
+{"id": "cbdcop", "name": "UN Biodiversity Conference (CBD COP)", "short": "CBD COP", "streams": ["climate", "science", "policy"], "city": null, "country": null, "region": "Worldwide", "month": "October to December", "every": "Every two years, host country changes", "since": 1994, "org": "Convention on Biological Diversity", "url": "https://www.cbd.int", "desc": "Global nature and biodiversity negotiations. Hyderabad hosted COP11 in 2012."},
+{"id": "cwnyc", "name": "Climate Week NYC", "short": "Climate Week", "streams": ["climate", "business"], "city": "New York", "country": "United States", "region": "North America", "month": "September", "every": "Annual", "since": 2009, "org": "Climate Group", "url": "https://www.climateweeknyc.org", "desc": "Hundreds of climate events alongside the UN General Assembly."},
+{"id": "lcaw", "name": "London Climate Action Week", "short": "LCAW", "streams": ["climate"], "city": "London", "country": "United Kingdom", "region": "Europe", "month": "June", "every": "Annual", "since": 2019, "org": "London Climate Action Week", "url": "https://www.londonclimateactionweek.org", "desc": "Week of climate events across London, open to many organisers."},
+{"id": "wwweek", "name": "World Water Week", "short": "World Water Week", "streams": ["climate", "science", "policy"], "city": "Stockholm", "country": "Sweden", "region": "Europe", "month": "August", "every": "Annual", "since": 1991, "org": "Stockholm International Water Institute", "url": "https://www.worldwaterweek.org", "desc": "The leading conference on water and development."},
+{"id": "adsw", "name": "Abu Dhabi Sustainability Week", "short": "ADSW", "streams": ["climate", "business"], "city": "Abu Dhabi", "country": "United Arab Emirates", "region": "Middle East", "month": "January", "every": "Annual", "since": 2008, "org": "Masdar", "url": "https://abudhabisustainabilityweek.com", "desc": "Energy transition summit with the World Future Energy Summit expo."},
+{"id": "smartere", "name": "The smarter E Europe (Intersolar Europe)", "short": "Intersolar", "streams": ["climate", "engineering"], "city": "Munich", "country": "Germany", "region": "Europe", "month": "May to June", "every": "Annual, with an India edition", "since": 1991, "org": "Solar Promotion and FMM", "url": "https://www.thesmartere.de", "desc": "Europe's largest solar, storage and smart energy show."},
+{"id": "skoll", "name": "Skoll World Forum", "short": "Skoll", "streams": ["policy", "business", "climate"], "city": "Oxford", "country": "United Kingdom", "region": "Europe", "month": "April", "every": "Annual", "since": 2004, "org": "Skoll Foundation", "url": "https://skoll.org", "desc": "Forum for social entrepreneurs and funders."},
+{"id": "iucn", "name": "IUCN World Conservation Congress", "short": "IUCN Congress", "streams": ["climate", "science"], "city": null, "country": null, "region": "Worldwide", "month": "September to October", "every": "Every four years", "since": 1948, "org": "IUCN", "url": "https://iucn.org", "desc": "Governments and conservation groups set the global conservation agenda."},
+{"id": "msc", "name": "Munich Security Conference", "short": "MSC", "streams": ["policy"], "city": "Munich", "country": "Germany", "region": "Europe", "month": "February", "every": "Annual", "since": 1963, "org": "Munich Security Conference", "url": "https://securityconference.org", "desc": "The leading forum on international security policy."},
+{"id": "shangrila", "name": "Shangri-La Dialogue", "short": "Shangri-La", "streams": ["policy"], "city": "Singapore", "country": "Singapore", "region": "Asia", "month": "May to June", "every": "Annual", "since": 2002, "org": "IISS", "url": "https://www.iiss.org", "desc": "Asia's main defence summit, with ministers from across the Indo-Pacific."},
+{"id": "unga", "name": "UN General Assembly High-Level Week", "short": "UNGA", "streams": ["policy"], "city": "New York", "country": "United States", "region": "North America", "month": "September", "every": "Annual", "since": 1946, "org": "United Nations", "url": "https://www.un.org/en/ga/", "desc": "World leaders address the UN, with many side events."},
+{"id": "igf", "name": "Internet Governance Forum", "short": "IGF", "streams": ["policy", "tech"], "city": null, "country": null, "region": "Worldwide", "month": "June to December", "every": "Annual, host country changes", "since": 2006, "org": "United Nations", "url": "https://www.intgovforum.org", "desc": "Open UN forum on how the internet is run. Hyderabad hosted it in 2008."},
+{"id": "rightscon", "name": "RightsCon", "short": "RightsCon", "streams": ["policy", "tech"], "city": null, "country": null, "region": "Worldwide", "month": "February to June", "every": "Annual, host city changes", "since": 2011, "org": "Access Now", "url": "https://www.rightscon.org", "desc": "Summit on human rights in the digital age."},
+{"id": "aspen", "name": "Aspen Ideas Festival", "short": "Aspen Ideas", "streams": ["policy", "humanities"], "city": "Aspen", "country": "United States", "region": "North America", "month": "June", "every": "Annual", "since": 2005, "org": "Aspen Institute", "url": "https://www.aspenideas.org", "desc": "Ideas festival on politics, science, culture and health."},
+{"id": "ppf", "name": "Paris Peace Forum", "short": "PPF", "streams": ["policy"], "city": "Paris", "country": "France", "region": "Europe", "month": "November", "every": "Annual", "since": 2018, "org": "Paris Peace Forum", "url": "https://parispeaceforum.org", "desc": "Forum on global governance projects, from climate to digital."},
+{"id": "boao", "name": "Boao Forum for Asia", "short": "Boao", "streams": ["policy", "business"], "city": "Boao", "country": "China", "region": "Asia", "month": "March", "every": "Annual", "since": 2001, "org": "Boao Forum for Asia", "url": "https://www.boaoforum.org", "desc": "Asia's economic forum on Hainan island."},
+{"id": "aha-hist", "name": "American Historical Association Annual Meeting", "short": "AHA (history)", "streams": ["humanities"], "city": null, "country": "United States", "region": "North America", "month": "January", "every": "Annual, host city changes", "since": 1884, "org": "American Historical Association", "url": "https://www.historians.org", "desc": "The largest gathering of historians in North America."},
+{"id": "mla", "name": "MLA Annual Convention", "short": "MLA", "streams": ["humanities"], "city": null, "country": "United States", "region": "North America", "month": "January", "every": "Annual, host city changes", "since": 1883, "org": "Modern Language Association", "url": "https://www.mla.org", "desc": "Literature and language scholars' main convention."},
+{"id": "isa", "name": "International Studies Association Annual Convention", "short": "ISA", "streams": ["humanities", "policy"], "city": null, "country": null, "region": "Worldwide", "month": "March to April", "every": "Annual, host city changes", "since": 1959, "org": "International Studies Association", "url": "https://www.isanet.org", "desc": "The largest international relations conference."},
+{"id": "aas", "name": "Association for Asian Studies Annual Conference", "short": "AAS", "streams": ["humanities"], "city": null, "country": "United States", "region": "North America", "month": "March", "every": "Annual, host city changes, with AAS-in-Asia", "since": 1941, "org": "Association for Asian Studies", "url": "https://www.asianstudies.org", "desc": "The main meeting for scholars of Asia, including South Asia."},
+{"id": "asa", "name": "American Sociological Association Annual Meeting", "short": "ASA", "streams": ["humanities"], "city": null, "country": "United States", "region": "North America", "month": "August", "every": "Annual, host city changes", "since": 1905, "org": "American Sociological Association", "url": "https://www.asanet.org", "desc": "The largest sociology meeting."},
+{"id": "apsa", "name": "APSA Annual Meeting", "short": "APSA", "streams": ["humanities", "policy"], "city": null, "country": "United States", "region": "North America", "month": "September", "every": "Annual, host city changes", "since": 1903, "org": "American Political Science Association", "url": "https://www.apsanet.org", "desc": "The main political science meeting."},
+{"id": "aaa", "name": "American Anthropological Association Annual Meeting", "short": "AAA", "streams": ["humanities"], "city": null, "country": "United States", "region": "North America", "month": "November", "every": "Annual, host city changes", "since": 1902, "org": "American Anthropological Association", "url": "https://americananthro.org", "desc": "The world's largest anthropology meeting."},
+{"id": "bett", "name": "Bett UK", "short": "Bett", "streams": ["education", "tech"], "city": "London", "country": "United Kingdom", "region": "Europe", "month": "January", "every": "Annual, with Asia and other editions", "since": 1985, "org": "Hyve", "url": "https://uk.bettshow.com", "desc": "The large education technology show for schools and universities."},
+{"id": "iste", "name": "ISTELive", "short": "ISTELive", "streams": ["education", "tech"], "city": null, "country": "United States", "region": "North America", "month": "June to July", "every": "Annual, host city changes", "since": 1979, "org": "ISTE+ASCD", "url": "https://iste.org", "desc": "Conference on technology in teaching and learning."},
+{"id": "educause", "name": "EDUCAUSE Annual Conference", "short": "EDUCAUSE", "streams": ["education", "tech"], "city": null, "country": "United States", "region": "North America", "month": "October", "every": "Annual, host city changes", "since": 1998, "org": "EDUCAUSE", "url": "https://events.educause.edu", "desc": "Higher education IT and digital learning conference."},
+{"id": "wise", "name": "WISE Summit", "short": "WISE", "streams": ["education", "policy"], "city": "Doha", "country": "Qatar", "region": "Middle East", "month": "November", "every": "Every two years", "since": 2009, "org": "Qatar Foundation", "url": "https://www.wise-qatar.org", "desc": "World Innovation Summit for Education, on the future of learning."},
+{"id": "sxswedu", "name": "SXSW EDU", "short": "SXSW EDU", "streams": ["education"], "city": "Austin", "country": "United States", "region": "North America", "month": "March", "every": "Annual", "since": 2011, "org": "SXSW", "url": "https://www.sxswedu.com", "desc": "Education conference and festival ahead of SXSW."},
+{"id": "asugsv", "name": "ASU+GSV Summit", "short": "ASU+GSV", "streams": ["education", "business"], "city": "San Diego", "country": "United States", "region": "North America", "month": "April", "every": "Annual", "since": 2010, "org": "Arizona State University and GSV Ventures", "url": "https://www.asugsvsummit.com", "desc": "Edtech investment and innovation summit."},
+{"id": "nafsa", "name": "NAFSA Annual Conference", "short": "NAFSA", "streams": ["education"], "city": null, "country": "United States", "region": "North America", "month": "May to June", "every": "Annual, host city changes", "since": 1948, "org": "NAFSA: Association of International Educators", "url": "https://www.nafsa.org", "desc": "International education and student mobility conference, useful for Indian universities recruiting abroad."},
+{"id": "eaie", "name": "EAIE Conference", "short": "EAIE", "streams": ["education"], "city": null, "country": null, "region": "Europe", "month": "September", "every": "Annual, host city changes", "since": 1989, "org": "European Association for International Education", "url": "https://www.eaie.org", "desc": "Europe's international higher education conference."},
+{"id": "iac", "name": "International Astronautical Congress", "short": "IAC", "streams": ["engineering", "science"], "city": null, "country": null, "region": "Worldwide", "month": "September to October", "every": "Annual, host city changes", "since": 1950, "org": "International Astronautical Federation", "url": "https://www.iafastro.org", "desc": "The world's main space congress. Bengaluru hosted it in 2007."},
+{"id": "spacesym", "name": "Space Symposium", "short": "Space Symposium", "streams": ["engineering"], "city": "Colorado Springs", "country": "United States", "region": "North America", "month": "April", "every": "Annual", "since": 1984, "org": "Space Foundation", "url": "https://www.spacesymposium.org", "desc": "Space industry and policy conference."},
+{"id": "parisair", "name": "Paris Air Show", "short": "Le Bourget", "streams": ["engineering", "business"], "city": "Paris", "country": "France", "region": "Europe", "month": "June", "every": "Every two years, odd years", "since": 1909, "org": "SIAE", "url": "https://www.siae.fr", "desc": "The world's oldest and largest air show, at Le Bourget."},
+{"id": "farnborough", "name": "Farnborough International Airshow", "short": "Farnborough", "streams": ["engineering", "business"], "city": "Farnborough", "country": "United Kingdom", "region": "Europe", "month": "July", "every": "Every two years, even years", "since": 1948, "org": "Farnborough International", "url": "https://www.farnboroughairshow.com", "desc": "Major aerospace trade show, alternating with Paris."},
+{"id": "icra", "name": "IEEE International Conference on Robotics and Automation", "short": "ICRA", "streams": ["engineering", "ai", "science"], "city": null, "country": null, "region": "Worldwide", "month": "May to June", "every": "Annual, host city changes", "since": 1984, "org": "IEEE Robotics and Automation Society", "url": "https://www.ieee-ras.org", "desc": "The largest robotics research conference."},
+{"id": "electronica", "name": "electronica", "short": "electronica", "streams": ["engineering", "tech"], "city": "Munich", "country": "Germany", "region": "Europe", "month": "November", "every": "Every two years, even years, with an India edition", "since": 1964, "org": "Messe München", "url": "https://electronica.de", "desc": "The leading trade fair for electronic components and systems."},
+{"id": "africatech", "name": "Africa Tech Summit Nairobi", "short": "Africa Tech Summit", "streams": ["tech", "business"], "city": "Nairobi", "country": "Kenya", "region": "Africa", "month": "February", "every": "Annual, with a London edition", "since": 2018, "org": "Africa Tech Summit", "desc": "Tech investment and startup summit for Africa."}
+]
+}
