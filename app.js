@@ -131,6 +131,7 @@ async function start() {
     open(record.name, streamNames(record).join(' · '));
     content.append(element('p', [place(record), `usually ${record.month}`, record.every, record.since && `since ${record.since}`].filter(Boolean).join(' · '), 'meta'));
     if (record.org) content.append(element('p', `Organised by ${record.org}`, 'meta'));
+    if (photos.logos?.[record.id]) content.append(figure({ alt: `${record.short} logo`, ...photos.logos[record.id] }, 'logo-photo'));
     content.append(element('p', record.desc));
     list('Links', [
       record.url ? source(record.url, 'Official website') : source(`https://duckduckgo.com/?q=${encodeURIComponent(record.name)}`, 'Search the web for its official site'),
@@ -210,6 +211,7 @@ async function start() {
     section('', 'It is the companion to ', ['https://omshivaprakash.github.io/litfest-speaker-guide/', 'LitFest Guide'], ' and ', ['https://omshivaprakash.github.io/filmfest-guide/', 'FilmFest Guide'], ', and is built the same way.');
     section('Where the information comes from', 'Each conference is hand-listed from its official site and organiser. The month shown is the usual one; dates, venues and host cities change from year to year, so the official site is always the final word.');
     section('Editions, people and awards', `${editions.length} editions so far list who spoke, the main sessions and the awards given, each with its sources. Photos come from Wikimedia Commons under open licences and are credited where they appear.`);
+    section('Logos', 'Logos come from Wikimedia Commons where it has one, otherwise from the conference’s own website. They belong to their owners, are shown only to identify each conference, and are credited where they appear.');
     section('Open data', 'The list is open data under ', ['https://creativecommons.org/licenses/by/4.0/', 'CC BY 4.0'], '. See ', [`${G}/blob/main/LICENSE-DATA.md`, 'the data licence'], ' and ', [`${G}/blob/main/CITATION.cff`, 'how to cite'], '. The code is MIT.');
     section('Your privacy', 'No account, no tracking, no analytics and no cookies. Pages, data and fonts are served from this site. Conference sites open only when you tap them.');
     section('Use it as an app', 'Add it to your home screen from your browser’s menu, and it opens offline once you have visited.');
@@ -230,8 +232,10 @@ async function start() {
       const card = button('', 'result', () => showConference(record));
       const copy = element('span', '', 'result-copy');
       copy.append(element('span', [streamNames(record)[0], record.month, record.cadence, record.editions && `${record.editions.length} edition${record.editions.length > 1 ? 's' : ''}`].filter(Boolean).join(' · '), 'tag'), element('span', record.name, 'card-title'), element('span', [place(record), record.org].filter(Boolean).join(' · '), 'card-copy'));
-      const icon = element('span', initials(record.short), 'thumbnail');
+      const logo = photos.logos?.[record.id];
+      const icon = element('span', logo ? '' : initials(record.short), logo ? 'thumbnail logo' : 'thumbnail');
       icon.setAttribute('aria-hidden', 'true');
+      if (logo) icon.append(Object.assign(element('img'), { src: logo.src, alt: '', loading: 'lazy' }));
       card.append(icon, copy);
       return card;
     };
