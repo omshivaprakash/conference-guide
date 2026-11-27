@@ -1,7 +1,7 @@
 {
  "checked": "2026-11-27",
  "conferences": 159,
- "matched": 59,
+ "matched": 62,
  "unmatched": [
   "bts",
   "ntlf",
@@ -47,13 +47,11 @@
   "sxsw",
   "reinvent",
   "kubecon",
-  "gitex",
   "slush",
   "vivatech",
   "pyconus",
   "chi",
   "icse",
-  "aaai",
   "gtc",
   "usenixsec",
   "agu",
@@ -88,7 +86,6 @@
   "lcaw",
   "wwweek",
   "iucn",
-  "unga",
   "aspen",
   "aha-hist",
   "isa",
@@ -238,6 +235,12 @@
    "status": 0
   },
   {
+   "id": "pedicon",
+   "issue": "link failed",
+   "url": "https://iapindia.org",
+   "status": 525
+  },
+  {
    "id": "interaction",
    "issue": "link moved",
    "url": "https://interaction.ixda.org",
@@ -274,6 +277,12 @@
    "issue": "since differs",
    "ours": 1988,
    "wikidata": 1987
+  },
+  {
+   "id": "gitex",
+   "issue": "since differs",
+   "ours": 1981,
+   "wikidata": 1996
   },
   {
    "id": "parisair",

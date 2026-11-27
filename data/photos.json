@@ -1,5 +1,5 @@
 {
- "about": "Photos from Wikimedia Commons under free licences, made by tools/extractors/photos. Each keeps its own licence and credit.",
+ "about": "Photos from Wikimedia Commons under free licences, and conference logos, made by tools/extractors/photos. Each keeps its own licence and credit.",
  "people": {
   "Alison Gopnik": {
    "src": "images/alison-gopnik.jpg",
@@ -7,6 +7,27 @@
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Alison_Gopnik_Photo.jpg"
+  },
+  "Sepp Hochreiter": {
+   "src": "images/sepp-hochreiter.jpg",
+   "credit": "C.Stadler/Bwag",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sepp_Hochreiter_-_Buch_Wien_2025.JPG"
+  },
+  "Fei-Fei Li": {
+   "src": "images/fei-fei-li.jpg",
+   "credit": "ITU Pictures",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Fei-Fei_Li_at_AI_for_Good_2017.jpg"
+  },
+  "Danica Kragic": {
+   "src": "images/danica-kragic.jpg",
+   "credit": "Vogler",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Danica_Kragic.jpg"
   },
   "Rosalind Picard": {
    "src": "images/rosalind-picard.jpg",
@@ -43,6 +64,13 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
    "source": "https://commons.wikimedia.org/wiki/File:Hugo_Duminil-Copin_in_Oberwolfach_(cropped).jpg"
   },
+  "June Huh": {
+   "src": "images/june-huh.jpg",
+   "credit": "John D. and Catherine T. MacArthur Foundation",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:June_Huh_MacArthur_Fellows_Program_2022.jpg"
+  },
   "Mark Braverman": {
    "src": "images/mark-braverman.jpg",
    "credit": "Almalts",
@@ -78,6 +106,20 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Frank-Walter_Steinmeier_2026.jpeg"
   },
+  "JD Vance": {
+   "src": "images/jd-vance.jpg",
+   "credit": "Emily J. Higgins",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:March_2026_Official_Vice_Presidential_Portrait_of_JD_Vance_(medium_crop)_(2).jpg"
+  },
+  "Jens Stoltenberg": {
+   "src": "images/jens-stoltenberg.jpg",
+   "credit": "Chairman of the Joint Chiefs of Staff from Washington D.C, United States",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Jens_Stoltenberg,_Minister_of_Finance_of_Norway,_at_the_Munich_Security_Conference_in_Munich,_Germany_on_February_14,_2025_(cropped).jpg"
+  },
   "Klaus Schwab": {
    "src": "images/klaus-schwab.jpg",
    "credit": "World Economic Forum",
@@ -105,6 +147,27 @@
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Olaf_Scholz_September_2024.jpg"
+  },
+  "Volodymyr Zelenskyy": {
+   "src": "images/volodymyr-zelenskyy.jpg",
+   "credit": "Press Service of the President of Ukraine",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Volodymyr_Zelensky_2022_official_portrait_(cropped).jpg"
+  },
+  "Ding Xuexiang": {
+   "src": "images/ding-xuexiang.jpg",
+   "credit": "Photographer: Lukasz Kobus",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ding_Xuexiang_EU_2024_(cropped).jpg"
+  },
+  "Pham Minh Chinh": {
+   "src": "images/pham-minh-chinh.jpg",
+   "credit": "Federation Council (Russia)",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ph%E1%BA%A1m_Minh_Ch%C3%ADnh_2026_visit_to_Russia.jpg"
   },
   "Cyril Ramaphosa": {
    "src": "images/cyril-ramaphosa.jpg",
@@ -141,6 +204,20 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:David_Beckham_UNICEF_(cropped2).jpg"
   },
+  "Mukhtar Babayev": {
+   "src": "images/mukhtar-babayev.jpg",
+   "credit": "Ulkan.a",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mukhtar-Babayev.jpg"
+  },
+  "Christopher Luxon": {
+   "src": "images/christopher-luxon.png",
+   "credit": "New Zealand National Party",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:LUXON,_Christopher_-_Botany_(cropped).png"
+  },
   "Doreen Bogdan-Martin": {
    "src": "images/doreen-bogdan-martin.jpg",
    "credit": "IAEA Imagebank",
@@ -162,6 +239,20 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Ed_Bastian_Delta_CEO.jpg"
   },
+  "Gary Shapiro": {
+   "src": "images/gary-shapiro.jpg",
+   "credit": "Bigbromason",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Gs_Headshot.jpg"
+  },
+  "Linda Yaccarino": {
+   "src": "images/linda-yaccarino.jpg",
+   "credit": "UK Home Office676767",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Linda_Yaccarino,_CEO_of_X_in_New_York_City_on_February_27,_2024_(cropped).jpg"
+  },
   "Julie Sweet": {
    "src": "images/julie-sweet.jpg",
    "credit": "World Economic Forum",
@@ -177,6 +268,687 @@
    "license": "Public domain",
    "licenseUrl": null,
    "source": "https://commons.wikimedia.org/wiki/File:MSC_Logo.svg"
+  }
+ },
+ "logos": {
+  "bts": {
+   "src": "images/logos/bts.png",
+   "credit": "Bengaluru Tech Summit, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.bengalurutechsummit.com"
+  },
+  "imc": {
+   "src": "images/logos/imc.png",
+   "credit": "India Mobile Congress, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.indiamobilecongress.com"
+  },
+  "ntlf": {
+   "src": "images/logos/ntlf.png",
+   "credit": "Nasscom Technology and Leadership Forum, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://nasscom.in/ntlf"
+  },
+  "pyconin": {
+   "src": "images/logos/pyconin.png",
+   "credit": "PyCon India, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://in.pycon.org"
+  },
+  "indiafoss": {
+   "src": "images/logos/indiafoss.ico",
+   "credit": "IndiaFOSS, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://fossunited.org/indiafoss"
+  },
+  "fifthel": {
+   "src": "images/logos/fifthel.png",
+   "credit": "The Fifth Elephant, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://hasgeek.com/fifthelephant"
+  },
+  "semiconin": {
+   "src": "images/logos/semiconin.ico",
+   "credit": "SEMICON India, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.semiconindia.org"
+  },
+  "techsparks": {
+   "src": "images/logos/techsparks.png",
+   "credit": "TechSparks, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://techsparks.yourstory.com"
+  },
+  "vgs": {
+   "src": "images/logos/vgs.png",
+   "credit": "Government of Gujarat",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Vibrant_Gujarat_Logo.png"
+  },
+  "hipc": {
+   "src": "images/logos/hipc.png",
+   "credit": "IEEE International Conference on High Performance Computing, Data and Analytics, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.hipc.org"
+  },
+  "isec": {
+   "src": "images/logos/isec.ico",
+   "credit": "India Software Engineering Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://conf.researchr.org/series/isec"
+  },
+  "aeroindia": {
+   "src": "images/logos/aeroindia.png",
+   "credit": "Aero India, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://aeroindia.gov.in"
+  },
+  "bmge": {
+   "src": "images/logos/bmge.png",
+   "credit": "Bharat Mobility Global Expo, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.bharat-mobility.com"
+  },
+  "csi": {
+   "src": "images/logos/csi.ico",
+   "credit": "Cardiological Society of India Annual Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.csi.org.in"
+  },
+  "pedicon": {
+   "src": "images/logos/pedicon.png",
+   "credit": "PEDICON, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://iapindia.org"
+  },
+  "asicon": {
+   "src": "images/logos/asicon.jpg",
+   "credit": "ASICON, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://asiindia.org"
+  },
+  "cphiin": {
+   "src": "images/logos/cphiin.png",
+   "credit": "CPHI and PMEC India, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.cphi.com/india"
+  },
+  "uxindia": {
+   "src": "images/logos/uxindia.png",
+   "credit": "UXINDIA, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://ux-india.org"
+  },
+  "iew": {
+   "src": "images/logos/iew.png",
+   "credit": "India Energy Week, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.indiaenergyweek.com"
+  },
+  "raisina": {
+   "src": "images/logos/raisina.png",
+   "credit": "Raisina Dialogue, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.orfonline.org/forums/raisina-dialogue"
+  },
+  "kec": {
+   "src": "images/logos/kec.png",
+   "credit": "Kautilya Economic Conclave, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://iegindia.org"
+  },
+  "iea": {
+   "src": "images/logos/iea.png",
+   "credit": "Indian Economic Association Annual Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://indianeconomicassociation1917.com"
+  },
+  "aisc": {
+   "src": "images/logos/aisc.png",
+   "credit": "All India Sociological Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.insoso.org"
+  },
+  "iec": {
+   "src": "images/logos/iec.ico",
+   "credit": "Indian Engineering Congress, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.ieindia.org"
+  },
+  "ces": {
+   "src": "images/logos/ces.png",
+   "credit": "CES, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.ces.tech"
+  },
+  "mwc": {
+   "src": "images/logos/mwc.png",
+   "credit": "™/®GSM Association",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Mobile_World_Congress_logo_(2019-present).svg"
+  },
+  "sxsw": {
+   "src": "images/logos/sxsw.png",
+   "credit": "SXSW, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.sxsw.com"
+  },
+  "gio": {
+   "src": "images/logos/gio.png",
+   "credit": "Google",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Google_IO_logo.svg"
+  },
+  "wwdc": {
+   "src": "images/logos/wwdc.png",
+   "credit": "Original: Apple Inc. Vectorization: Wefk423",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Apple_WWDC_wordmark.svg"
+  },
+  "build": {
+   "src": "images/logos/build.png",
+   "credit": ". The original uploader was WinMetro at English Wikipedia.",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Microsoft_BUILD_Conf_logo.svg"
+  },
+  "reinvent": {
+   "src": "images/logos/reinvent.png",
+   "credit": "AWS re:Invent, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://aws.amazon.com/events/reinvent/"
+  },
+  "kubecon": {
+   "src": "images/logos/kubecon.png",
+   "credit": "KubeCon + CloudNativeCon, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.cncf.io/kubecon-cloudnativecon-events/"
+  },
+  "computex": {
+   "src": "images/logos/computex.png",
+   "credit": "Taiwan External Trade Development Council",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Computex_Taipei_logo_since_2010.svg"
+  },
+  "ifa": {
+   "src": "images/logos/ifa.png",
+   "credit": "IFA Berlin, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.ifa-berlin.com"
+  },
+  "gitex": {
+   "src": "images/logos/gitex.png",
+   "credit": "GITEX Global, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.gitex.com"
+  },
+  "slush": {
+   "src": "images/logos/slush.png",
+   "credit": "Slush, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://slush.org"
+  },
+  "pyconus": {
+   "src": "images/logos/pyconus.png",
+   "credit": "PyCon US, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://us.pycon.org"
+  },
+  "gdc": {
+   "src": "images/logos/gdc.png",
+   "credit": "UBM TechWeb",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Game_Developers_Conference_logo.svg"
+  },
+  "icse": {
+   "src": "images/logos/icse.ico",
+   "credit": "International Conference on Software Engineering, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://conf.researchr.org/series/icse"
+  },
+  "acl": {
+   "src": "images/logos/acl.svg",
+   "credit": "Annual Meeting of the Association for Computational Linguistics, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.aclweb.org"
+  },
+  "aaai": {
+   "src": "images/logos/aaai.png",
+   "credit": "AAAI Conference on Artificial Intelligence, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://aaai.org"
+  },
+  "ijcai": {
+   "src": "images/logos/ijcai.png",
+   "credit": "International Joint Conference on Artificial Intelligence, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.ijcai.org"
+  },
+  "blackhat": {
+   "src": "images/logos/blackhat.png",
+   "credit": "Unknown authorUnknown author",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Black_Hat_(conference).svg"
+  },
+  "rsac": {
+   "src": "images/logos/rsac.png",
+   "credit": "The original uploader was CorporateM at English Wikipedia.",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:RSA_Conference_Logo.png"
+  },
+  "ccc": {
+   "src": "images/logos/ccc.svg",
+   "credit": "Chaos Communication Congress, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://events.ccc.de"
+  },
+  "usenixsec": {
+   "src": "images/logos/usenixsec.ico",
+   "credit": "USENIX Security Symposium, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.usenix.org/conferences"
+  },
+  "aaas": {
+   "src": "images/logos/aaas.ico",
+   "credit": "AAAS Annual Meeting, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.aaas.org"
+  },
+  "egu": {
+   "src": "images/logos/egu.png",
+   "credit": "European Geosciences Union",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:EGU_plain_blue_logo.svg"
+  },
+  "lindau": {
+   "src": "images/logos/lindau.png",
+   "credit": "Lindau Nobel Laureate Meetings, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.lindau-nobel.org"
+  },
+  "sfn": {
+   "src": "images/logos/sfn.png",
+   "credit": "Society for Neuroscience Annual Meeting, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.sfn.org"
+  },
+  "icm": {
+   "src": "images/logos/icm.ico",
+   "credit": "International Congress of Mathematicians, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.mathunion.org"
+  },
+  "iauga": {
+   "src": "images/logos/iauga.ico",
+   "credit": "IAU General Assembly, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.iau.org"
+  },
+  "fallingwalls": {
+   "src": "images/logos/fallingwalls.png",
+   "credit": "Falling Walls Science Summit, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://falling-walls.com"
+  },
+  "esc": {
+   "src": "images/logos/esc.png",
+   "credit": "ESC Congress, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.escardio.org"
+  },
+  "ada": {
+   "src": "images/logos/ada.ico",
+   "credit": "ADA Scientific Sessions, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://professional.diabetes.org"
+  },
+  "esmo": {
+   "src": "images/logos/esmo.png",
+   "credit": "ESMO Congress, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.esmo.org"
+  },
+  "rsna": {
+   "src": "images/logos/rsna.png",
+   "credit": "RSNA Annual Meeting, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.rsna.org"
+  },
+  "wha": {
+   "src": "images/logos/wha.png",
+   "credit": "World Health Assembly, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.who.int"
+  },
+  "whs": {
+   "src": "images/logos/whs.png",
+   "credit": "World Health Summit, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.worldhealthsummit.org"
+  },
+  "medica": {
+   "src": "images/logos/medica.ico",
+   "credit": "MEDICA, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.medica-tradefair.com"
+  },
+  "aids": {
+   "src": "images/logos/aids.png",
+   "credit": "International AIDS Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.iasociety.org"
+  },
+  "bio": {
+   "src": "images/logos/bio.png",
+   "credit": "BIO International Convention, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.bio.org"
+  },
+  "sff": {
+   "src": "images/logos/sff.png",
+   "credit": "Singapore FinTech Festival, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.fintechfestival.sg"
+  },
+  "money2020": {
+   "src": "images/logos/money2020.png",
+   "credit": "Money20/20, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.money2020.com"
+  },
+  "canneslions": {
+   "src": "images/logos/canneslions.png",
+   "credit": "Yuriysak",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:CANNES_LIONS.png"
+  },
+  "dreamforce": {
+   "src": "images/logos/dreamforce.ico",
+   "credit": "Dreamforce, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.salesforce.com/dreamforce/"
+  },
+  "disrupt": {
+   "src": "images/logos/disrupt.png",
+   "credit": "TechCrunch Disrupt, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://techcrunch.com/events/"
+  },
+  "tiecon": {
+   "src": "images/logos/tiecon.png",
+   "credit": "TiEcon, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://tiecon.org"
+  },
+  "fii": {
+   "src": "images/logos/fii.png",
+   "credit": "Future Investment Initiative, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://fii-institute.org"
+  },
+  "hannover": {
+   "src": "images/logos/hannover.png",
+   "credit": "Hannover Messe, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.hannovermesse.de"
+  },
+  "salone": {
+   "src": "images/logos/salone.ico",
+   "credit": "Salone del Mobile.Milano (Milan Design Week), official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.salonemilano.it"
+  },
+  "ddw": {
+   "src": "images/logos/ddw.png",
+   "credit": "Dutch Design Week, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://ddw.nl"
+  },
+  "ldf": {
+   "src": "images/logos/ldf.jpg",
+   "credit": "Dearbhla Mac Fadden Islington",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:LDF_Logo_New_Red_2019.jpg"
+  },
+  "config": {
+   "src": "images/logos/config.png",
+   "credit": "Config, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://config.figma.com"
+  },
+  "designindaba": {
+   "src": "images/logos/designindaba.png",
+   "credit": "Design Indaba, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.designindaba.com"
+  },
+  "offf": {
+   "src": "images/logos/offf.png",
+   "credit": "OFFF Barcelona, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://offf.barcelona"
+  },
+  "interaction": {
+   "src": "images/logos/interaction.png",
+   "credit": "Interaction, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://interaction.ixda.org"
+  },
+  "cop": {
+   "src": "images/logos/cop.png",
+   "credit": "UN Climate Change Conference (COP), official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://unfccc.int"
+  },
+  "sb": {
+   "src": "images/logos/sb.png",
+   "credit": "Bonn Climate Change Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://unfccc.int"
+  },
+  "cbdcop": {
+   "src": "images/logos/cbdcop.ico",
+   "credit": "UN Biodiversity Conference (CBD COP), official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.cbd.int"
+  },
+  "cwnyc": {
+   "src": "images/logos/cwnyc.png",
+   "credit": "IFlynn",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:CWNYC-logo-RGB-black-red-landscape.png"
+  },
+  "wwweek": {
+   "src": "images/logos/wwweek.ico",
+   "credit": "World Water Week, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.worldwaterweek.org"
+  },
+  "adsw": {
+   "src": "images/logos/adsw.ico",
+   "credit": "Abu Dhabi Sustainability Week, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://abudhabisustainabilityweek.com"
+  },
+  "smartere": {
+   "src": "images/logos/smartere.ico",
+   "credit": "The smarter E Europe (Intersolar Europe), official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.intersolar.de"
+  },
+  "skoll": {
+   "src": "images/logos/skoll.png",
+   "credit": "Skoll World Forum, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://skoll.org"
+  },
+  "iucn": {
+   "src": "images/logos/iucn.png",
+   "credit": "IUCN World Conservation Congress, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://iucn.org"
+  },
+  "msc": {
+   "src": "images/logos/msc.png",
+   "credit": "Mrmw",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:MSC_Logo_02.svg"
+  },
+  "unga": {
+   "src": "images/logos/unga.png",
+   "credit": "Joowwww",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:UN_emblem_blue.svg"
+  },
+  "igf": {
+   "src": "images/logos/igf.png",
+   "credit": "Internet Governance Forum",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Internet-Governance-Forum-logo.png"
+  },
+  "rightscon": {
+   "src": "images/logos/rightscon.png",
+   "credit": "RightsCon, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.rightscon.org"
+  },
+  "aspen": {
+   "src": "images/logos/aspen.png",
+   "credit": "Aspen Ideas Festival, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.aspenideas.org"
+  },
+  "ppf": {
+   "src": "images/logos/ppf.png",
+   "credit": "Paris Peace Forum, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://parispeaceforum.org"
+  },
+  "mla": {
+   "src": "images/logos/mla.png",
+   "credit": "Modern Language Association",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Modern_Language_Association_logo_2018.png"
+  },
+  "isa": {
+   "src": "images/logos/isa.ico",
+   "credit": "International Studies Association Annual Convention, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.isanet.org"
+  },
+  "aas": {
+   "src": "images/logos/aas.png",
+   "credit": "Association for Asian Studies Annual Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.asianstudies.org"
+  },
+  "asa": {
+   "src": "images/logos/asa.svg",
+   "credit": "American Sociological Association Annual Meeting, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.asanet.org"
+  },
+  "apsa": {
+   "src": "images/logos/apsa.png",
+   "credit": "Original: American Political Science Association Vector: Pantarch",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:American_Political_Science_Association_logo.svg"
+  },
+  "aaa": {
+   "src": "images/logos/aaa.png",
+   "credit": "American Anthropological Association",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:Logo_American_Anthropological_Association.svg"
+  },
+  "bett": {
+   "src": "images/logos/bett.ico",
+   "credit": "Bett UK, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://uk.bettshow.com"
+  },
+  "iste": {
+   "src": "images/logos/iste.png",
+   "credit": "ISTELive, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://iste.org"
+  },
+  "wise": {
+   "src": "images/logos/wise.ico",
+   "credit": "WISE Summit, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.wise-qatar.org"
+  },
+  "sxswedu": {
+   "src": "images/logos/sxswedu.png",
+   "credit": "SXSW EDU, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.sxswedu.com"
+  },
+  "asugsv": {
+   "src": "images/logos/asugsv.png",
+   "credit": "ASU+GSV Summit, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.asugsvsummit.com"
+  },
+  "nafsa": {
+   "src": "images/logos/nafsa.ico",
+   "credit": "NAFSA Annual Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.nafsa.org"
+  },
+  "eaie": {
+   "src": "images/logos/eaie.png",
+   "credit": "EAIE Conference, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.eaie.org"
+  },
+  "iac": {
+   "src": "images/logos/iac.ico",
+   "credit": "International Astronautical Congress, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.iafastro.org"
+  },
+  "spacesym": {
+   "src": "images/logos/spacesym.png",
+   "credit": "Space Symposium, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.spacefoundation.org/events/space-symposium/"
+  },
+  "parisair": {
+   "src": "images/logos/parisair.png",
+   "credit": "Paris Air Show, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.siae.fr"
+  },
+  "icra": {
+   "src": "images/logos/icra.webp",
+   "credit": "IEEE International Conference on Robotics and Automation, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://www.ieee-ras.org"
+  },
+  "electronica": {
+   "src": "images/logos/electronica.png",
+   "credit": "electronica, official website",
+   "license": "Logo of its owner, shown to identify the conference",
+   "source": "https://electronica.de"
   }
  }
 }
