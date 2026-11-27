@@ -321,13 +321,23 @@ async function start() {
     insights = [
       { h: `${conferences.filter(record => record.months.includes(thisMonth)).length} conferences usually meet in ${MONTHS[thisMonth]}`, s: 'Conferences by usual month. Tap a bar to see what is on.', v: monthBars(conferences), act: () => listWith('', month, MONTHS[thisMonth]) },
       { h: `Coming up · ${upTo}`, s: soon.slice(0, 4).map(record => record.short).join(', '), act: sheet('Coming up', upTo, () => soon.map(record => conferenceRow(record))) },
-      { h: `Held in ${countries.size} countries`, s: 'Filled dots are fixed cities; hollow dots move between cities in a country.', v: worldMap(points(conferences)), act: () => go('', 'map') },
+      { h: `Held in ${countries.size} countries`, s: mapLegend(), v: worldMap(points(conferences)), act: () => go('', 'map') },
       { h: `${editions.length} editions list people, talks and awards`, s: recent.slice(0, 4).map(record => editionLabel(record, record.editions[0])).join(', '), act: sheet('Editions with people and awards', 'Editions', () => recent.map(record => conferenceRow(record, editionLabel(record, record.editions[0])))) },
       { h: `${cadences[0][1]} meet ${cadences[0][0] === 'Annual' ? 'every year' : cadences[0][0].toLowerCase()}`, s: cadences.slice(1, 4).map(([name, count]) => `${count} ${name.toLowerCase()}`).join(', '), act: sheet('How often they meet', 'Frequency', () => barList(cadences.map(([name, count]) => [name, count, () => listWith('', often, name)]))) },
       { h: `${india.length} held in India`, s: `Most in ${indiaStreams.slice(0, 3).map(([id, count]) => `${streamMap.get(id).name} (${count})`).join(', ')}`, act: sheet('India by stream', 'India', () => barList(indiaStreams.map(([id, count]) => [streamMap.get(id).name, count, () => listWith(id, where, 'India')]))) },
       { h: `${hosts[0][0]} hosts the most: ${hosts[0][1]}`, s: hosts.slice(1, 4).map(([name, count]) => `${name} ${count}`).join(', '), act: sheet('Top host countries', 'Countries', () => barList(hosts.slice(0, 12).map(([name, count]) => [name, count, () => listWith('', search, name)]))) }
     ];
     showInsight(insight);
+  }
+  // Same legend the home map had before it became an insight slide.
+  function mapLegend() {
+    const legend = element('span', '', 'legend');
+    for (const [className, text] of [['', 'Fixed city'], ['wip', 'Moves between cities in a country']]) {
+      const key = element('span');
+      key.append(element('i', '', className), text);
+      legend.append(key);
+    }
+    return legend;
   }
   let insights = [];
   let insight = 0;
@@ -337,7 +347,9 @@ async function start() {
     insight = (index + insights.length) % insights.length;
     const item = insights[insight];
     const copy = element('div', '', 'lit');
-    copy.append(element('b', item.h), element('span', item.s), button('Explore this ›', 'lgo', item.act));
+    const links = element('span', '', 'lgos');
+    links.append(button('Explore this ›', 'lgo', item.act), button('All conferences ›', 'lgo', () => go('', 'list')));
+    copy.append(element('b', item.h), typeof item.s === 'string' ? element('span', item.s) : item.s, links);
     const dots = element('div', '', 'ldots');
     dots.append(...insights.map((_, k) => {
       const dot = button('', '', () => showInsight(k));
