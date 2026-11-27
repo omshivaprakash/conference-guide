@@ -243,7 +243,9 @@ dialog h4 { margin: 10px 0 2px; font-size: 13px; font-weight: 700; }
 .lins[hidden] { display: none; }
 .lit { flex: 1; min-width: 0; }
 .lit b { display: block; font: 800 .98rem/1.2 var(--display); }
-.lit span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin-top: 2px; font-size: 11.5px; line-height: 1.3; color: var(--muted); }
+.lit > span:not(.legend):not(.lgos) { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin-top: 2px; font-size: 11.5px; line-height: 1.3; color: var(--muted); }
+.lit .legend { margin-top: 3px; }
+.lgos { display: flex; flex-wrap: wrap; gap: 0 14px; }
 .lgo { padding: 4px 0 0; border: 0; background: none; color: var(--accent); font: 700 12px var(--body); }
 .liv { flex: 0 0 160px; }
 .liv:empty { display: none; }
@@ -256,6 +258,9 @@ dialog h4 { margin: 10px 0 2px; font-size: 13px; font-weight: 700; }
 .ldots button[aria-current="true"]::after { background: var(--accent); opacity: 1; }
 @media (max-width: 860px) { .results.streams { --columns: 2; } }
 @media (max-width: 560px) { #home .sub { display: none; } .results.streams { --columns: 1; } .liv { flex-basis: 96px; } .lit b { font-size: .9rem; } }
-@media (max-height: 640px) { .lins { display: none; } }
+/* Short screens keep a compact strip: headline and links only */
+@media (max-height: 640px) { .lins { min-height: 0; padding-top: 6px; } .lins .liv, .lit > span:not(.lgos) { display: none; } }
 #d-kpis { grid-template-columns: repeat(4, 1fr); }
 #discover .bars { height: clamp(40px, 8vh, 90px); }
+/* Phones in landscape: drop the heading and tiles so the strip and at least one row of cards fit */
+@media (max-height: 460px) { #home .top, #home-kpis { display: none; } }
