@@ -46,6 +46,16 @@ function monthsOf(text) {
   }
   return [...new Set(found)];
 }
+// One label per conference for "how often", read from the free-text `every` field so the catalogue stays the single source.
+const CADENCES = ['Annual', 'Several a year', 'Every two years', 'Every three years', 'Every four years', 'Irregular', 'On hold'];
+function cadenceOf(every) {
+  if (/on hold/i.test(every)) return 'On hold';
+  if (/several a year/i.test(every)) return 'Several a year';
+  if (/^annual|annual since/i.test(every)) return 'Annual';
+  if (/two to three|year or two/i.test(every)) return 'Irregular';
+  const found = /every (two|three|four) years/i.exec(every);
+  return found ? `Every ${found[1].toLowerCase()} years` : null;
+}
 const tally = (records, keysOf) => {
   const counts = new Map();
   for (const record of records) for (const key of keysOf(record)) counts.set(key, (counts.get(key) || 0) + 1);
@@ -56,14 +66,32 @@ async function start() {
   const search = byId('search');
   const where = byId('where');
   const month = byId('month');
+  const often = byId('often');
   const detail = byId('detail');
   const content = byId('detail-content');
   const results = byId('results');
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
   const { streams, places, conferences } = await response.json();
+  // Editions (people, sessions, awards) and their openly licensed photos are separate files; the guide works without them.
+  const optional = url => fetch(url).then(reply => (reply.ok ? reply.json() : null)).catch(() => null);
+  const [editionData, photoData] = await Promise.all([optional('data/editions.json'), optional('data/photos.json')]);
+  const { editions = [], people = {} } = editionData || {};
+  const photos = photoData || { people: {}, editions: {} };
   const streamMap = new Map(streams.map(stream => [stream.id, stream]));
+  const conferenceMap = new Map(conferences.map(record => [record.id, record]));
+  const namesIn = event => [...event.sessions.flatMap(item => item.people || []), ...event.awards.flatMap(item => item.to)];
+  const appearances = new Map();
+  for (const event of editions.sort((a, b) => b.year - a.year)) {
+    const record = conferenceMap.get(event.conference);
+    (record.editions ||= []).push(event);
+    for (const name of new Set(namesIn(event))) {
+      if (!appearances.has(name)) appearances.set(name, []);
+      appearances.get(name).push(event);
+    }
+  }
   for (const record of conferences) {
+    record.cadence = cadenceOf(record.every);
     record.months = monthsOf(record.month);
     // Rotating conferences sit at their country's centre on the map, or off the map when they move between countries.
     const point = record.city ? places[record.city] : POS[record.country];
@@ -109,8 +137,65 @@ async function start() {
       /^Q\d+$/.test(record.wikidata || '') && source(`https://www.wikidata.org/wiki/${record.wikidata}`, 'Wikidata')
     ].filter(Boolean));
     content.append(element('p', 'Dates and venues move. Check the official site before you plan travel or submit a paper.', 'meta'));
+    for (const event of record.editions || []) showEdition(record, event);
     const others = conferences.filter(other => other !== record && other.streams[0] === record.streams[0] && other.months.some(m => record.months.includes(m)));
     list('Same stream, same time of year', others.slice(0, 6).map(other => button(`${other.short} · ${other.city || other.country || 'rotates'}`, 'credit-link', () => showConference(other))));
+  }
+  const editionLabel = (record, event) => `${record.short} ${event.year}`;
+  const personButton = name => (people[name] || appearances.get(name)?.length > 1 ? button(name, 'credit-link', () => showPerson(name)) : name);
+  const withPeople = (text, names = []) => {
+    const row = element('span', names.length ? `${text} · ` : text);
+    names.forEach((name, index) => row.append(index ? ', ' : '', personButton(name)));
+    return row;
+  };
+  function figure(photo, className) {
+    const box = element('figure', '', className);
+    const image = element('img');
+    image.src = photo.src;
+    image.alt = photo.alt || '';
+    image.loading = 'lazy';
+    const caption = element('figcaption');
+    caption.append(source(photo.source, photo.credit || 'Wikimedia Commons'), ' · ', photo.licenseUrl ? source(photo.licenseUrl, photo.license) : photo.license);
+    box.append(image, caption);
+    return box;
+  }
+  function showEdition(record, event) {
+    content.append(element('h3', [event.year, event.number && (/^\d/.test(event.number) ? `${event.number} edition` : event.number)].filter(Boolean).join(' · ')));
+    const photo = photos.editions[`${event.conference}-${event.year}`];
+    if (photo) content.append(figure(photo, 'edition-photo'));
+    content.append(element('p', [event.dates, [event.venue, event.city, event.country].filter(Boolean).join(', ')].filter(Boolean).join(' · '), 'meta'));
+    if (event.theme) content.append(element('p', `Theme: ${event.theme}`));
+    for (const fact of event.facts || []) content.append(element('p', fact, 'meta'));
+    const sessions = element('ul');
+    for (const item of event.sessions) {
+      const li = element('li');
+      li.append(withPeople(`${item.type}: ${item.title}`, item.people), ...(item.source ? [' · ', source(item.source, 'source')] : []));
+      sessions.append(li);
+    }
+    const awards = element('ul');
+    for (const item of event.awards) {
+      const li = element('li');
+      li.append(withPeople([item.award, item.work].filter(Boolean).join(': '), item.to), ...(item.source ? [' · ', source(item.source, 'source')] : []));
+      awards.append(li);
+    }
+    if (event.sessions.length) content.append(element('h4', 'People, talks and sessions'), sessions);
+    if (event.awards.length) content.append(element('h4', 'Awards'), awards);
+    const links = element('p', 'Sources: ', 'meta');
+    event.sources.forEach((url, index) => links.append(index ? ', ' : '', source(url, new URL(url).hostname.replace(/^www\./, ''))));
+    content.append(links);
+  }
+  function showPerson(name) {
+    open(name, 'Person');
+    const photo = photos.people[name];
+    if (photo) content.append(figure({ alt: name, ...photo }, 'profile-photo'));
+    if (people[name]?.about) content.append(element('p', people[name].about, 'meta'));
+    list('At these conferences', (appearances.get(name) || []).map(event => {
+      const record = conferenceMap.get(event.conference);
+      const roles = [...event.sessions.filter(item => item.people?.includes(name)).map(item => item.type), ...event.awards.filter(item => item.to.includes(name)).map(item => item.award)];
+      const row = element('span');
+      row.append(button(editionLabel(record, event), 'credit-link', () => showConference(record)), ` · ${[...new Set(roles)].join(', ')}`);
+      return row;
+    }));
   }
   function showAbout() {
     open('About Conference Guide', 'About');
@@ -124,6 +209,7 @@ async function start() {
     section('', `An independent, non-commercial guide to recurring conferences in India and around the world: ${number(conferences.length)} conferences across ${streams.length} streams, from technology and medicine to climate, design and the humanities. It is not affiliated with, endorsed by or sponsored by any conference.`);
     section('', 'It is the companion to ', ['https://omshivaprakash.github.io/litfest-speaker-guide/', 'LitFest Guide'], ' and ', ['https://omshivaprakash.github.io/filmfest-guide/', 'FilmFest Guide'], ', and is built the same way.');
     section('Where the information comes from', 'Each conference is hand-listed from its official site and organiser. The month shown is the usual one; dates, venues and host cities change from year to year, so the official site is always the final word.');
+    section('Editions, people and awards', `${editions.length} editions so far list who spoke, the main sessions and the awards given, each with its sources. Photos come from Wikimedia Commons under open licences and are credited where they appear.`);
     section('Open data', 'The list is open data under ', ['https://creativecommons.org/licenses/by/4.0/', 'CC BY 4.0'], '. See ', [`${G}/blob/main/LICENSE-DATA.md`, 'the data licence'], ' and ', [`${G}/blob/main/CITATION.cff`, 'how to cite'], '. The code is MIT.');
     section('Your privacy', 'No account, no tracking, no analytics and no cookies. Pages, data and fonts are served from this site. Conference sites open only when you tap them.');
     section('Use it as an app', 'Add it to your home screen from your browser’s menu, and it opens offline once you have visited.');
@@ -143,7 +229,7 @@ async function start() {
     return () => {
       const card = button('', 'result', () => showConference(record));
       const copy = element('span', '', 'result-copy');
-      copy.append(element('span', [streamNames(record)[0], record.month].join(' · '), 'tag'), element('span', record.name, 'card-title'), element('span', [place(record), record.org].filter(Boolean).join(' · '), 'card-copy'));
+      copy.append(element('span', [streamNames(record)[0], record.month, record.cadence, record.editions && `${record.editions.length} edition${record.editions.length > 1 ? 's' : ''}`].filter(Boolean).join(' · '), 'tag'), element('span', record.name, 'card-title'), element('span', [place(record), record.org].filter(Boolean).join(' · '), 'card-copy'));
       const icon = element('span', initials(record.short), 'thumbnail');
       icon.setAttribute('aria-hidden', 'true');
       card.append(icon, copy);
@@ -224,6 +310,13 @@ async function start() {
     stats.push(panel(`Coming up · ${MONTHS[thisMonth]} to ${MONTHS[(thisMonth + 2) % 12]}`, ...soon.slice(0, 8).map(record => {
       const row = element('p', '', 'meta');
       row.append(button(record.name, 'credit-link', () => showConference(record)), ` · ${record.city || record.country || 'rotates'} · ${record.month}`);
+      return row;
+    })));
+    stats.push(panel('How often they meet', ...barList(tally(conferences, record => [record.cadence]).map(([name, count]) => [name, count, () => listWith('', often, name)]))));
+    const recent = conferences.filter(record => record.editions).sort((a, b) => b.editions[0].year - a.editions[0].year);
+    stats.push(panel('Editions with people and awards', ...recent.map(record => {
+      const row = element('p', '', 'meta');
+      row.append(button(editionLabel(record, record.editions[0]), 'credit-link', () => showConference(record)), ` · ${record.editions[0].city || 'online'}`);
       return row;
     })));
     stats.push(panel('India by stream', ...barList(tally(india, record => record.streams).map(([id, count]) => [streamMap.get(id).name, count, () => listWith(id, where, 'India')]))));
@@ -312,6 +405,7 @@ async function start() {
   const regions = [...new Set(conferences.map(record => record.region))].filter(region => region !== 'India').sort();
   options(where, [['India', 'India'], ['Outside India', 'Outside India'], ...regions.map(region => [region, `· ${region}`])], 'Anywhere');
   options(month, MONTHS.map(name => [name, name]), 'Any month');
+  options(often, CADENCES.filter(name => conferences.some(record => record.cadence === name)).map(name => [name, name]), 'How often');
   function renderList() {
     const query = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
     const match = values => query.every(term => normalize(values.flat().filter(Boolean).join(' ')).includes(term));
@@ -319,7 +413,8 @@ async function start() {
     items = inStream()
       .filter(record => !where.value || whereOf(record) === where.value || record.region === where.value)
       .filter(record => monthIndex < 0 || record.months.includes(monthIndex))
-      .filter(record => match([record.name, record.short, record.city, record.country, record.region, record.org, record.month, record.desc, streamNames(record)]))
+      .filter(record => !often.value || record.cadence === often.value)
+      .filter(record => match([record.name, record.short, record.city, record.country, record.region, record.org, record.month, record.every, record.desc, streamNames(record), (record.editions || []).map(event => [event.theme, namesIn(event), event.sessions.map(item => item.title), event.awards.map(item => [item.award, item.work])])]))
       .sort((a, b) => (a.months[0] ?? 12) - (b.months[0] ?? 12) || a.name.localeCompare(b.name))
       .map(result);
     page = 0;
@@ -345,7 +440,7 @@ async function start() {
 
   // Routing: ?s=<stream> picks the stream, #<tab> picks the view.
   function go(id, nextView, resetFilters = true) {
-    if (resetFilters) for (const input of [search, where, month]) input.value = '';
+    if (resetFilters) for (const input of [search, where, month, often]) input.value = '';
     streamId = id;
     view = nextView;
     const url = new URL(location.href);
@@ -389,9 +484,9 @@ async function start() {
     document.title = selected ? `${selected.name} · Conference Guide` : 'Conference Guide';
   }
 
-  for (const input of [search, where, month]) input.addEventListener('input', renderList);
+  for (const input of [search, where, month, often]) input.addEventListener('input', renderList);
   byId('reset').addEventListener('click', () => {
-    for (const input of [search, where, month]) input.value = '';
+    for (const input of [search, where, month, often]) input.value = '';
     renderList();
   });
   for (const [control, step] of [[previous, -1], [next, 1]]) {
@@ -420,4 +515,4 @@ if (typeof document !== 'undefined') start().catch(error => {
   document.querySelector('.app').append(element('p', 'The catalogue could not load. Refresh to try again.', 'empty'));
 });
 if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js');
-if (typeof module !== 'undefined') module.exports = { monthsOf };
+if (typeof module !== 'undefined') module.exports = { monthsOf, cadenceOf };

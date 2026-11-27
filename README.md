@@ -27,9 +27,10 @@ Every field has its big annual meetings, but finding them means knowing the acro
 |---|---|
 | See every stream, the world map and what is coming up | **Home** (the **All** chip) |
 | Open a stream: its conferences, India first, and a month-by-month chart | Stream chip, **Discover** tab |
-| Search by name, city, organiser or topic; filter by India, region or month | **Conferences** tab (or **Search**) |
+| Search by name, city, organiser, topic, speaker or award; filter by India, region, month or how often it meets | **Conferences** tab (or **Search**) |
 | See where a stream's conferences meet | **Map** tab |
-| Open a conference: usual month, place, organiser, how often, official site | Tap any conference |
+| Open a conference: usual month, place, organiser, how often, official site, and for notable editions the speakers, sessions, panels and awards | Tap any conference |
+| See everything a person did across conferences, with a credited photo | Tap a name |
 
 Links are shareable: `?s=medicine` opens a stream and `#list` or `#map` opens a tab.
 
@@ -38,6 +39,10 @@ Links are shareable: `?s=medicine` opens a stream and `#list` or `#map` opens a 
 ## What is covered
 
 **159 recurring conferences, 44 of them in India, across 12 streams:** Technology · AI and data · Cybersecurity · Science · Medicine and health · Business and startups · Design · Climate and energy · Policy and society · Humanities and social sciences · Education · Engineering and space. A conference can belong to more than one stream.
+
+**12 notable editions so far list who spoke, the main sessions and the awards**, each with its sources: NeurIPS 2024, ICM 2022 (Fields Medals), Munich Security Conference 2025, Davos 2025, COP29, Raisina Dialogue 2025, India Mobile Congress 2024, Aero India 2025, PyCon India 2024, IAC 2024, CES 2025 and WWDC 2025. More are added edition by edition.
+
+Each conference is labelled with how often it meets (annual, every two, three or four years, several a year, irregular or on hold), and the list can be filtered by it.
 
 India includes, for example, Bengaluru Tech Summit, India Mobile Congress, Nullcon, PyCon India, Raisina Dialogue, BioAsia, APICON, the Indian History Congress and Aero India. The world list includes CES, NeurIPS, ASCO, Davos, COP, Milan Design Week, the Munich Security Conference and the International Astronautical Congress.
 
@@ -87,6 +92,28 @@ A website made of plain files: `index.html`, `app.js`, `style.css`, the map outl
 | `desc` | One sentence in our own words |
 | `wikidata` | Wikidata item id, added by the weekly refresh |
 
+### Editions (`data/editions.json`)
+
+What happened at one year of a conference. It is a separate file so the catalogue stays small and new editions can be added one at a time. A record looks like this:
+
+```json
+{"conference": "msc", "year": 2025, "number": "61st", "dates": "14–16 February 2025", "city": "Munich", "country": "Germany",
+ "venue": "Hotel Bayerischer Hof", "theme": "…", "wiki": "61st_Munich_Security_Conference", "facts": ["…"],
+ "sessions": [{"type": "Speech", "title": "…", "people": ["JD Vance"], "source": "https://…"}],
+ "awards": [{"award": "Ewald von Kleist Award", "to": ["Kaja Kallas"], "work": "…", "source": "https://…"}],
+ "sources": ["https://securityconference.org/en/msc-2025"]}
+```
+
+- `conference` is an `id` from `catalog.json`; one record per conference and year.
+- `sessions` covers keynotes, talks, panels, speeches and themed tracks; `type` says which (`Keynote`, `Panel`, `Session`, `Theme`…).
+- Everyone named in `sessions[].people` must be in `people`, with a short `about` and, if they have one, an English Wikipedia title in `wiki`. Award recipients (`awards[].to`) can be anyone, such as a paper's authors or a team.
+- `sources` is required; a session or award can add its own `source`. Use the organiser's own page first.
+- `wiki` on an edition or person is used only to find an openly licensed photo.
+
+### Photos (`data/photos.json`, `images/`)
+
+Every Monday `tools/extractors/photos/extract.py` takes the lead image of each `wiki` article, keeps it only if Wikimedia Commons lists a free licence (CC0, CC BY, CC BY-SA or public domain), saves a small copy in `images/`, and records the photographer, licence and Commons page. The site serves the copies itself and shows the credit under each photo.
+
 ### Weekly refresh
 
 Every Monday, GitHub Actions runs `tools/extractors/refresh/extract.py` (`.github/workflows/refresh.yml`, or run it by hand from the Actions tab). It:
@@ -99,7 +126,7 @@ Anything else it finds, such as Wikidata giving a different first year or websit
 
 ### Adding a conference
 
-Add one line to `conferences` in `catalog.json`. If its city is new, add the city to `places`. Run `node check-catalog.mjs` and open a pull request.
+Add one line to `conferences` in `catalog.json`. If its city is new, add the city to `places`. If its `every` text is new, check that `cadenceOf` in `app.js` reads it (the check will tell you). Run `node check-catalog.mjs` and open a pull request. To add an edition, append a record to `data/editions.json` the same way.
 
 ---
 
