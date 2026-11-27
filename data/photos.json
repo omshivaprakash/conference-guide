@@ -1,5 +1,182 @@
 {
  "about": "Photos from Wikimedia Commons under free licences, made by tools/extractors/photos. Each keeps its own licence and credit.",
- "people": {},
- "editions": {}
+ "people": {
+  "Alison Gopnik": {
+   "src": "images/alison-gopnik.jpg",
+   "credit": "Kathleen King",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Alison_Gopnik_Photo.jpg"
+  },
+  "Rosalind Picard": {
+   "src": "images/rosalind-picard.jpg",
+   "credit": "David Bruce from Boston, MA, cropped by Disavian",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Panel_Discussion_Close-up,_Science,_Faith,_and_Technology_Cropped.jpg"
+  },
+  "Ilya Sutskever": {
+   "src": "images/ilya-sutskever.jpg",
+   "credit": "Eladkarmel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ilya_Sutskever_and_Sam_Altman_in_TAU_(cropped).jpg"
+  },
+  "Ian Goodfellow": {
+   "src": "images/ian-goodfellow.jpg",
+   "credit": "Ian Goodfellow",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ian_Goodfellow.jpg"
+  },
+  "Yoshua Bengio": {
+   "src": "images/yoshua-bengio.jpg",
+   "credit": "Xuthoria",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:ICLR_2025_-_Yoshua_Bengio_02.jpg"
+  },
+  "Hugo Duminil-Copin": {
+   "src": "images/hugo-duminil-copin.jpg",
+   "credit": "Ruf, Tatjana",
+   "license": "CC BY-SA 2.5",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Hugo_Duminil-Copin_in_Oberwolfach_(cropped).jpg"
+  },
+  "Mark Braverman": {
+   "src": "images/mark-braverman.jpg",
+   "credit": "Almalts",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mark_Braverman.jpg"
+  },
+  "Barry Mazur": {
+   "src": "images/barry-mazur.jpg",
+   "credit": "George Bergman",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Barry_Mazur,_April_1992_(re-scanned,_headshot).jpg"
+  },
+  "Elliott Lieb": {
+   "src": "images/elliott-lieb.jpeg",
+   "credit": "Originally uploaded by Elieb (Transferred by Baroc)",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Elliott-Lieb-07.jpeg"
+  },
+  "Kaja Kallas": {
+   "src": "images/kaja-kallas.jpg",
+   "credit": "Aurore Martignoni / European Union",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Kaja_Kallas,_High_Representative_of_the_Union,_and_Vice-President_of_the_European_Commission_(3x4_cropped).jpg"
+  },
+  "Frank-Walter Steinmeier": {
+   "src": "images/frank-walter-steinmeier.jpeg",
+   "credit": "The President's Office, Maldives",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Frank-Walter_Steinmeier_2026.jpeg"
+  },
+  "Klaus Schwab": {
+   "src": "images/klaus-schwab.jpg",
+   "credit": "World Economic Forum",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Klaus_Schwab_-_World_Economic_Forum_Annual_Meeting_2011.jpg"
+  },
+  "Børge Brende": {
+   "src": "images/b-rge-brende.jpg",
+   "credit": "Claudio Centonze / European Union",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:B%C3%B8rge_Brende_visits_Brussels_-_2024_-_P064990-249510_(cropped).jpg"
+  },
+  "Ursula von der Leyen": {
+   "src": "images/ursula-von-der-leyen.jpg",
+   "credit": "European People's Party",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ursula_von_der_Leyen_2024.jpg"
+  },
+  "Olaf Scholz": {
+   "src": "images/olaf-scholz.jpg",
+   "credit": "Lula Oficial",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Olaf_Scholz_September_2024.jpg"
+  },
+  "Cyril Ramaphosa": {
+   "src": "images/cyril-ramaphosa.jpg",
+   "credit": "Lula Oficial",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cyril_Ramaphosa_in_2026.jpg"
+  },
+  "Isaac Herzog": {
+   "src": "images/isaac-herzog.jpg",
+   "credit": "Avi Ohayon",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Isaac_Herzog,_July_2021_(D1233-049).JPG"
+  },
+  "Riken Yamamoto": {
+   "src": "images/riken-yamamoto.jpg",
+   "credit": "Instituto Cervantes de Tokio",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Riken_Yamamoto_2016_(cropped).jpg"
+  },
+  "Diane von Furstenberg": {
+   "src": "images/diane-von-furstenberg.jpg",
+   "credit": "David Shankbone",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Diane_von_Furstenberg_2012_Shankbone.JPG"
+  },
+  "David Beckham": {
+   "src": "images/david-beckham.jpg",
+   "credit": "Soccer Aid for Unicef",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:David_Beckham_UNICEF_(cropped2).jpg"
+  },
+  "Doreen Bogdan-Martin": {
+   "src": "images/doreen-bogdan-martin.jpg",
+   "credit": "IAEA Imagebank",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Rafael_Mariano_Grossi_meeting_Doreen_Bogdan-Martin_(01915046)_(Cropped).jpg"
+  },
+  "Jensen Huang": {
+   "src": "images/jensen-huang.jpg",
+   "credit": "Anderseidesvik",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg"
+  },
+  "Ed Bastian": {
+   "src": "images/ed-bastian.jpg",
+   "credit": "Deltanet Photos",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ed_Bastian_Delta_CEO.jpg"
+  },
+  "Julie Sweet": {
+   "src": "images/julie-sweet.jpg",
+   "credit": "World Economic Forum",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Julie_Sweet_at_the_World_Economic_Forum.jpg"
+  }
+ },
+ "editions": {
+  "msc-2025": {
+   "src": "images/msc-2025.png",
+   "credit": "Mrmw",
+   "license": "Public domain",
+   "licenseUrl": null,
+   "source": "https://commons.wikimedia.org/wiki/File:MSC_Logo.svg"
+  }
+ }
 }

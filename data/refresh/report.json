@@ -1,7 +1,7 @@
 {
  "checked": "2026-11-27",
  "conferences": 159,
- "matched": 45,
+ "matched": 59,
  "unmatched": [
   "bts",
   "ntlf",
@@ -45,19 +45,16 @@
   "ces",
   "websummit",
   "sxsw",
-  "build",
   "reinvent",
   "kubecon",
   "gitex",
   "slush",
   "vivatech",
   "pyconus",
-  "siggraph",
   "chi",
   "icse",
   "aaai",
   "gtc",
-  "rsac",
   "usenixsec",
   "agu",
   "apsmm",
@@ -70,8 +67,6 @@
   "aha",
   "ada",
   "esmo",
-  "rsna",
-  "wha",
   "medica",
   "aids",
   "bio",
@@ -85,74 +80,125 @@
   "tiecon",
   "fii",
   "salone",
-  "ddw",
-  "ldf",
   "config",
   "offf",
   "interaction",
   "cop",
   "sb",
-  "cwnyc",
   "lcaw",
   "wwweek",
-  "smartere",
-  "skoll",
   "iucn",
   "unga",
   "aspen",
-  "ppf",
   "aha-hist",
   "isa",
   "aas",
   "asa",
-  "aaa",
   "bett",
   "iste",
   "educause",
   "wise",
-  "sxswedu",
   "asugsv",
   "iac",
   "spacesym",
-  "icra",
   "electronica",
   "africatech"
  ],
  "issues": [
   {
    "id": "agu",
-   "issue": "link failed",
+   "issue": "link blocks robots",
    "url": "https://www.agu.org",
    "status": 403
   },
   {
    "id": "aha",
-   "issue": "link failed",
+   "issue": "link blocks robots",
    "url": "https://professional.heart.org",
    "status": 403
   },
   {
    "id": "aha-hist",
-   "issue": "link failed",
+   "issue": "link blocks robots",
    "url": "https://www.historians.org",
    "status": 403
   },
   {
    "id": "aicog",
-   "issue": "link failed",
+   "issue": "link blocks robots",
    "url": "https://www.fogsi.org",
    "status": 403
   },
   {
    "id": "apsmm",
-   "issue": "link failed",
+   "issue": "link blocks robots",
    "url": "https://www.aps.org",
    "status": 403
   },
   {
    "id": "asco",
-   "issue": "link failed",
+   "issue": "link blocks robots",
    "url": "https://www.asco.org",
+   "status": 403
+  },
+  {
+   "id": "blackhat",
+   "issue": "link blocks robots",
+   "url": "https://www.blackhat.com",
+   "status": 403
+  },
+  {
+   "id": "chi",
+   "issue": "link blocks robots",
+   "url": "https://chi.acm.org",
+   "status": 403
+  },
+  {
+   "id": "educause",
+   "issue": "link blocks robots",
+   "url": "https://events.educause.edu",
+   "status": 403
+  },
+  {
+   "id": "iasmeet",
+   "issue": "link blocks robots",
+   "url": "https://www.ias.ac.in",
+   "status": 403
+  },
+  {
+   "id": "igf",
+   "issue": "link blocks robots",
+   "url": "https://www.intgovforum.org",
+   "status": 403
+  },
+  {
+   "id": "rsac",
+   "issue": "link blocks robots",
+   "url": "https://www.rsaconference.com",
+   "status": 403
+  },
+  {
+   "id": "shangrila",
+   "issue": "link blocks robots",
+   "url": "https://www.iiss.org",
+   "status": 403
+  },
+  {
+   "id": "vivatech",
+   "issue": "link blocks robots",
+   "url": "https://vivatechnology.com",
+   "status": 403
+  },
+  {
+   "id": "wef",
+   "issue": "link blocks robots",
+   "url": "https://www.weforum.org",
+   "status": 403
+  },
+  {
+   "id": "whx",
+   "issue": "link blocks robots",
+   "url": "https://www.worldhealthexpo.com",
    "status": 403
   },
   {
@@ -162,52 +208,16 @@
    "status": 0
   },
   {
-   "id": "blackhat",
-   "issue": "link failed",
-   "url": "https://www.blackhat.com",
-   "status": 403
-  },
-  {
    "id": "boao",
    "issue": "link failed",
    "url": "https://www.boaoforum.org",
    "status": 508
   },
   {
-   "id": "chi",
-   "issue": "link failed",
-   "url": "https://chi.acm.org",
-   "status": 403
-  },
-  {
    "id": "defcon",
    "issue": "link failed",
    "url": "https://defcon.org",
    "status": 0
-  },
-  {
-   "id": "educause",
-   "issue": "link failed",
-   "url": "https://events.educause.edu",
-   "status": 403
-  },
-  {
-   "id": "iasmeet",
-   "issue": "link failed",
-   "url": "https://www.ias.ac.in",
-   "status": 403
-  },
-  {
-   "id": "icm",
-   "issue": "link failed",
-   "url": "https://www.mathunion.org/icm",
-   "status": 404
-  },
-  {
-   "id": "igf",
-   "issue": "link failed",
-   "url": "https://www.intgovforum.org",
-   "status": 403
   },
   {
    "id": "iisf",
@@ -228,70 +238,24 @@
    "status": 0
   },
   {
-   "id": "raisina",
-   "issue": "link failed",
-   "url": "https://www.orfonline.org/raisina-dialogue",
-   "status": 404
-  },
-  {
-   "id": "rsac",
-   "issue": "link failed",
-   "url": "https://www.rsaconference.com",
-   "status": 403
-  },
-  {
-   "id": "shangrila",
-   "issue": "link failed",
-   "url": "https://www.iiss.org",
-   "status": 403
-  },
-  {
-   "id": "vivatech",
-   "issue": "link failed",
-   "url": "https://vivatechnology.com",
-   "status": 403
-  },
-  {
-   "id": "wef",
-   "issue": "link failed",
-   "url": "https://www.weforum.org",
-   "status": 403
-  },
-  {
-   "id": "whx",
-   "issue": "link failed",
-   "url": "https://www.worldhealthexpo.com",
-   "status": 403
-  },
-  {
-   "id": "adobemax",
-   "issue": "link moved",
-   "url": "https://max.adobe.com",
-   "now": "https://www.adobe.com/max.html"
-  },
-  {
    "id": "interaction",
    "issue": "link moved",
    "url": "https://interaction.ixda.org",
    "now": "https://interaction24.ixda.org/"
   },
   {
-   "id": "reinvent",
-   "issue": "link moved",
-   "url": "https://reinvent.awsevents.com",
-   "now": "https://aws.amazon.com/events/reinvent/"
+   "id": "adobemax",
+   "issue": "official site differs",
+   "ours": "https://www.adobe.com/max.html",
+   "wikidata": [
+    "https://max.adobe.com/"
+   ]
   },
   {
-   "id": "spacesym",
-   "issue": "link moved",
-   "url": "https://www.spacesymposium.org",
-   "now": "https://www.spacefoundation.org/events/space-symposium/"
-  },
-  {
-   "id": "techsparks",
-   "issue": "link moved",
-   "url": "https://yourstory.com/techsparks",
-   "now": "https://techsparks.yourstory.com/"
+   "id": "acl",
+   "issue": "since differs",
+   "ours": 1963,
+   "wikidata": 1962
   },
   {
    "id": "egu",
