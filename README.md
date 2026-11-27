@@ -114,6 +114,8 @@ What happened at one year of a conference. It is a separate file so the catalogu
 
 Every Monday `tools/extractors/photos/extract.py` takes the lead image of each `wiki` article, keeps it only if Wikimedia Commons lists a free licence (CC0, CC BY, CC BY-SA or public domain), saves a small copy in `images/`, and records the photographer, licence and Commons page. The site serves the copies itself and shows the credit under each photo.
 
+The same step keeps a logo for every conference in `images/logos/<id>`: the Wikidata logo on Commons when the conference has a `wikidata` id and a logo there, otherwise the icon its official site declares. Site logos belong to their owners and are shown only to identify the conference, credited to the site. A saved logo is not fetched again; delete the file to refresh it.
+
 ### Weekly refresh
 
 Every Monday, GitHub Actions runs `tools/extractors/refresh/extract.py` (`.github/workflows/refresh.yml`, or run it by hand from the Actions tab). It:
