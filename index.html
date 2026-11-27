@@ -36,17 +36,9 @@
     <p class="sub">When and where the major recurring conferences happen in each field, from tech and medicine to climate, design and the humanities. Pick a stream above, or browse them all.</p>
   </div>
   <div class="kpis" id="home-kpis"></div>
-  <div class="body"><div class="fgrid" id="festival-cards"></div><div class="homeexplore">
-      <div class="panel mapwrap" id="home-map"></div>
-      <div class="homelinks">
-        <h2 class="vh">Explore</h2>
-        <p class="sub">See every conference on a map, or search by name, city, organiser or month.</p>
-        <button type="button" class="hlink" data-go="map">World map of conferences ›</button>
-        <button type="button" class="hlink" data-go="list">All conferences, by month ›</button>
-        <p class="legend"><span><i></i>Fixed city</span><span><i class="wip"></i>Moves between cities in a country</span></p>
-      </div>
-    </div>
-    <div class="hstats" id="home-stats"></div></div>
+  <div class="lins" id="home-insight" hidden></div>
+  <h2 class="visually-hidden">Streams</h2>
+  <div class="body"><div class="results streams" id="festival-cards"></div></div>
 </main>
 
 <main class="view" id="discover" hidden>
@@ -58,7 +50,7 @@
   <div class="kpis" id="d-kpis"></div>
   <div class="panel"><h5>Conferences by usual month</h5><div id="d-bars"></div></div>
   <h2 class="vh">India first, then the world</h2>
-  <div class="body"><div class="results scroll" id="d-shelf"></div></div>
+  <div class="body"><div class="results" id="d-shelf"></div></div>
 </main>
 
 <main class="view" id="explore" hidden>

@@ -103,6 +103,7 @@ async function start() {
   const previous = byId('previous');
   const next = byId('next');
   let items = [];
+  let grid = results;
   let page = 0;
   let pageCount = 1;
 
@@ -243,11 +244,6 @@ async function start() {
       return tile;
     }));
   }
-  const panel = (heading, ...children) => {
-    const box = element('div', '', 'panel');
-    box.append(element('h5', heading), ...children);
-    return box;
-  };
   function barList(rows) {
     const peak = Math.max(1, ...rows.map(([, count]) => count));
     return rows.map(([name, count, action]) => {
@@ -294,7 +290,8 @@ async function start() {
       [streams.length, 'streams'],
       [conferences.filter(record => record.months.includes(new Date().getMonth())).length, `usually in ${MONTHS[new Date().getMonth()]}`]
     ]);
-    byId('festival-cards').replaceChildren(...streams.map(stream => {
+    // Stream cards page like the conference list, so home fits one screen (LitFest's festival cards do the same).
+    showPage(byId('festival-cards'), streams.map(stream => () => {
       const records = conferences.filter(record => record.streams.includes(stream.id));
       const card = button('', 'fcard', () => go(stream.id, 'discover'));
       const copy = element('span');
@@ -303,26 +300,56 @@ async function start() {
       card.append(element('span', stream.icon, 'thumbnail'), copy, element('span', String(records.length), 'badge'));
       return card;
     }));
-    byId('home-map').replaceChildren(worldMap(points(conferences)));
-    const stats = [panel('Conferences by usual month', monthBars(conferences), element('p', 'Tap a month to see what is on.', 'meta'))];
+    // The home stats take turns in one strip, as LitFest's insights do; "Explore this" opens the full panel in the sheet.
     const thisMonth = new Date().getMonth();
     const soon = [0, 1, 2].flatMap(step => conferences.filter(record => record.months[0] === (thisMonth + step) % 12));
-    stats.push(panel(`Coming up · ${MONTHS[thisMonth]} to ${MONTHS[(thisMonth + 2) % 12]}`, ...soon.slice(0, 8).map(record => {
-      const row = element('p', '', 'meta');
-      row.append(button(record.name, 'credit-link', () => showConference(record)), ` · ${record.city || record.country || 'rotates'} · ${record.month}`);
-      return row;
-    })));
-    stats.push(panel('How often they meet', ...barList(tally(conferences, record => [record.cadence]).map(([name, count]) => [name, count, () => listWith('', often, name)]))));
     const recent = conferences.filter(record => record.editions).sort((a, b) => b.editions[0].year - a.editions[0].year);
-    stats.push(panel('Editions with people and awards', ...recent.map(record => {
-      const row = element('p', '', 'meta');
-      row.append(button(editionLabel(record, record.editions[0]), 'credit-link', () => showConference(record)), ` · ${record.editions[0].city || 'online'}`);
+    const cadences = tally(conferences, record => [record.cadence]).filter(([name]) => name);
+    const indiaStreams = tally(india, record => record.streams);
+    const hosts = tally(conferences, record => (record.country ? [record.country] : []));
+    const conferenceRow = (record, text) => {
+      const row = element('span');
+      row.append(button(text || record.name, 'credit-link', () => showConference(record)), ` · ${record.city || record.country || 'rotates'} · ${record.month}`);
       return row;
-    })));
-    stats.push(panel('India by stream', ...barList(tally(india, record => record.streams).map(([id, count]) => [streamMap.get(id).name, count, () => listWith(id, where, 'India')]))));
-    stats.push(panel('Top host countries', ...barList(tally(conferences, record => (record.country ? [record.country] : [])).slice(0, 8).map(([name, count]) => [name, count, () => listWith('', search, name)]))));
-    byId('home-stats').replaceChildren(...stats);
+    };
+    const sheet = (title, category, rows) => () => { open(title, category); content.append(...rows()); };
+    const upTo = `${MONTHS[thisMonth]} to ${MONTHS[(thisMonth + 2) % 12]}`;
+    insights = [
+      { h: `${conferences.filter(record => record.months.includes(thisMonth)).length} conferences usually meet in ${MONTHS[thisMonth]}`, s: 'Conferences by usual month. Tap a bar to see what is on.', v: monthBars(conferences), act: () => listWith('', month, MONTHS[thisMonth]) },
+      { h: `Coming up · ${upTo}`, s: soon.slice(0, 4).map(record => record.short).join(', '), act: sheet('Coming up', upTo, () => soon.map(record => conferenceRow(record))) },
+      { h: `Held in ${countries.size} countries`, s: 'Filled dots are fixed cities; hollow dots move between cities in a country.', v: worldMap(points(conferences)), act: () => go('', 'map') },
+      { h: `${editions.length} editions list people, talks and awards`, s: recent.slice(0, 4).map(record => editionLabel(record, record.editions[0])).join(', '), act: sheet('Editions with people and awards', 'Editions', () => recent.map(record => conferenceRow(record, editionLabel(record, record.editions[0])))) },
+      { h: `${cadences[0][1]} meet ${cadences[0][0] === 'Annual' ? 'every year' : cadences[0][0].toLowerCase()}`, s: cadences.slice(1, 4).map(([name, count]) => `${count} ${name.toLowerCase()}`).join(', '), act: sheet('How often they meet', 'Frequency', () => barList(cadences.map(([name, count]) => [name, count, () => listWith('', often, name)]))) },
+      { h: `${india.length} held in India`, s: `Most in ${indiaStreams.slice(0, 3).map(([id, count]) => `${streamMap.get(id).name} (${count})`).join(', ')}`, act: sheet('India by stream', 'India', () => barList(indiaStreams.map(([id, count]) => [streamMap.get(id).name, count, () => listWith(id, where, 'India')]))) },
+      { h: `${hosts[0][0]} hosts the most: ${hosts[0][1]}`, s: hosts.slice(1, 4).map(([name, count]) => `${name} ${count}`).join(', '), act: sheet('Top host countries', 'Countries', () => barList(hosts.slice(0, 12).map(([name, count]) => [name, count, () => listWith('', search, name)]))) }
+    ];
+    showInsight(insight);
   }
+  let insights = [];
+  let insight = 0;
+  let insightTimer = 0;
+  function showInsight(index) {
+    const strip = byId('home-insight');
+    insight = (index + insights.length) % insights.length;
+    const item = insights[insight];
+    const copy = element('div', '', 'lit');
+    copy.append(element('b', item.h), element('span', item.s), button('Explore this ›', 'lgo', item.act));
+    const dots = element('div', '', 'ldots');
+    dots.append(...insights.map((_, k) => {
+      const dot = button('', '', () => showInsight(k));
+      dot.setAttribute('aria-label', `Insight ${k + 1}`);
+      dot.setAttribute('aria-current', String(k === insight));
+      return dot;
+    }));
+    const viz = element('div', '', 'liv');
+    if (item.v) viz.append(item.v);
+    strip.replaceChildren(copy, viz, dots);
+    strip.hidden = false;
+    clearTimeout(insightTimer);
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) insightTimer = setTimeout(() => { if (view === 'home' && !detail.open) showInsight(insight + 1); }, 7000);
+  }
+  // Tapping the strip outside its buttons and dots shows the next insight.
+  byId('home-insight').addEventListener('click', event => { if (!event.target.closest('button, circle')) showInsight(insight + 1); });
 
   // Discover: one stream
   function renderDiscover(stream) {
@@ -338,8 +365,7 @@ async function start() {
       [records.filter(record => !record.city).length, 'move between cities']
     ]);
     byId('d-bars').replaceChildren(monthBars(records));
-    const shelf = byId('d-shelf');
-    shelf.replaceChildren(...[...india, ...records.filter(record => record.region !== 'India')].map(record => result(record)()));
+    showPage(byId('d-shelf'), [...india, ...records.filter(record => record.region !== 'India')].map(result));
   }
 
   // Map
@@ -393,11 +419,11 @@ async function start() {
   function renderExplore() {
     const records = inStream();
     const roaming = records.filter(record => record.lon === undefined);
-    byId('ex-note').textContent = `${records.length} conferences. Filled dots are fixed cities; hollow dots are countries whose conferences move between cities. ${roaming.length} move between countries and are listed on the right.`;
+    byId('ex-note').textContent = `${records.length} conferences. Filled dots are fixed cities; hollow dots are countries whose conferences move between cities. ${roaming.length} move between countries.`;
     byId('ex-map').replaceChildren(worldMap(points(records)));
     byId('ex-bars').replaceChildren(
       element('h5', 'By region'), ...barList(tally(records, record => [record.region]).map(([name, count]) => [name, count, () => listWith(streamId, where, name)])),
-      element('h5', 'Move between countries'), ...roaming.map(record => button(`${record.short} · ${record.month}`, 'vb roam', () => showConference(record)))
+      element('h5', 'Move between countries'), button(`${roaming.length} conferences ›`, 'vb roam', () => showPlace('Move between countries', roaming))
     );
   }
 
@@ -417,10 +443,17 @@ async function start() {
       .filter(record => match([record.name, record.short, record.city, record.country, record.region, record.org, record.month, record.every, record.desc, streamNames(record), (record.editions || []).map(event => [event.theme, namesIn(event), event.sessions.map(item => item.title), event.awards.map(item => [item.award, item.work])])]))
       .sort((a, b) => (a.months[0] ?? 12) - (b.months[0] ?? 12) || a.name.localeCompare(b.name))
       .map(result);
+    showPage(results, items);
+  }
+  // Every list fills the screen and turns pages instead of scrolling: home streams, a stream's conferences and the search list.
+  function showPage(target, makers) {
+    grid = target;
+    items = makers;
     page = 0;
     paginate();
   }
   function paginate() {
+    const results = grid;
     const style = getComputedStyle(results);
     const columns = Number(style.getPropertyValue('--columns'));
     const row = parseFloat(style.gridAutoRows);
@@ -432,7 +465,7 @@ async function start() {
     const first = page * size;
     const visible = items.slice(first, first + size);
     results.replaceChildren(...(visible.length ? visible.map(makeCard => makeCard()) : [element('p', 'No matches. Try a different search or filter.', 'empty')]));
-    byId('count').textContent = items.length ? `${number(first + 1)}–${number(first + visible.length)} of ${number(items.length)}, by usual month` : '0 results';
+    if (view === 'list') byId('count').textContent = items.length ? `${number(first + 1)}–${number(first + visible.length)} of ${number(items.length)}, by usual month` : '0 results';
     byId('page-status').textContent = `Page ${page + 1} of ${pageCount}`;
     previous.setAttribute('aria-disabled', String(page === 0));
     next.setAttribute('aria-disabled', String(page + 1 === pageCount));
@@ -440,6 +473,7 @@ async function start() {
 
   // Routing: ?s=<stream> picks the stream, #<tab> picks the view.
   function go(id, nextView, resetFilters = true) {
+    if (detail.open) detail.close();
     if (resetFilters) for (const input of [search, where, month, often]) input.value = '';
     streamId = id;
     view = nextView;
@@ -475,7 +509,7 @@ async function start() {
     byId('home').hidden = view !== 'home';
     byId('discover').hidden = view !== 'discover';
     byId('archive').hidden = view !== 'list';
-    byId('pager').hidden = view !== 'list';
+    byId('pager').hidden = view === 'map';
     byId('explore').hidden = view !== 'map';
     if (view === 'home') renderHome();
     else if (view === 'discover') renderDiscover(selected);
@@ -491,18 +525,39 @@ async function start() {
   });
   for (const [control, step] of [[previous, -1], [next, 1]]) {
     control.addEventListener('click', () => {
-      if (control.getAttribute('aria-disabled') === 'true') return;
-      page += step;
-      paginate();
+      turn(step);
     });
   }
-  let size = '';
-  new ResizeObserver(() => {
-    const nextSize = `${results.clientWidth}x${results.clientHeight}`;
-    if (nextSize === size || byId('archive').hidden) return;
-    size = nextSize;
+  function turn(step) {
+    if (byId('pager').hidden || page + step < 0 || page + step >= pageCount) return;
+    page += step;
     paginate();
-  }).observe(results);
+  }
+  // Arrow keys and a sideways swipe turn pages, as in LitFest Guide.
+  document.addEventListener('keydown', event => {
+    if (detail.open || event.target.closest('input, select, textarea') || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === 'ArrowLeft') turn(-1);
+    else if (event.key === 'ArrowRight') turn(1);
+  });
+  let touch = null;
+  document.addEventListener('touchstart', event => { touch = event.touches.length === 1 ? event.touches[0] : null; }, { passive: true });
+  document.addEventListener('touchend', event => {
+    if (!touch || detail.open || touch.target.closest?.('.fb-l, .tabs, .seg')) return;
+    const dx = event.changedTouches[0].clientX - touch.clientX;
+    const dy = event.changedTouches[0].clientY - touch.clientY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > 2 * Math.abs(dy)) turn(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  const sizes = new Map();
+  const resized = new ResizeObserver(entries => {
+    for (const { target } of entries) {
+      const nextSize = `${target.clientWidth}x${target.clientHeight}`;
+      if (nextSize === sizes.get(target)) continue;
+      sizes.set(target, nextSize);
+      if (target === grid && target.offsetParent) paginate();
+    }
+  });
+  for (const target of [results, byId('festival-cards'), byId('d-shelf')]) resized.observe(target);
+
   window.addEventListener('popstate', () => {
     readLocation();
     render();
