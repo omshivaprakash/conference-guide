@@ -18,17 +18,17 @@ UA = {'User-Agent': 'conference-guide-data/1.0 (open data project; github.com/om
 API = 'https://www.wikidata.org/w/api.php?'
 
 
-def get(url, tries=3):
+def get(url, tries=3, body=True):
     """Return (status, final_url, body); status 0 means the request failed."""
     for attempt in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers={**UA, 'Accept': '*/*'}), timeout=30) as reply:
-                return reply.status, reply.url, reply.read(2_000_000)
+                return reply.status, reply.url, reply.read(2_000_000) if body else b''
         except urllib.error.HTTPError as error:
             if error.code not in (429, 500, 502, 503, 504) or attempt == tries - 1:
                 return error.code, url, b''
         except Exception as error:  # timeouts and resets: back off and retry
-            print('retry', url[:80], error, file=sys.stderr)
+            print('retry', url[:80], error, flush=True)
             if attempt == tries - 1:
                 return 0, url, b''
         time.sleep(5 * (attempt + 1))
@@ -83,7 +83,7 @@ def merge(record, qid, fact, issues):
 
 
 def check_link(record, issues):
-    status, final, _ = get(record['url'], tries=2)
+    status, final, _ = get(record['url'], tries=2, body=False)  # status only: a slow page body can stall the run
     if status == 0 or status >= 400:
         issues.append({'id': record['id'], 'issue': 'link failed', 'url': record['url'], 'status': status})
     elif host(final) != host(record['url']):
@@ -109,7 +109,8 @@ def main():
     stored, known = [r['wikidata'] for r in conferences if r.get('wikidata')], {}
     for i in range(0, len(stored), 50):  # wbgetentities takes at most 50 ids
         known.update(entities(stored[i:i + 50]))
-    for record in conferences:
+    for n, record in enumerate(conferences, 1):
+        print(n, record['id'], flush=True)  # progress in the Actions log
         if record.get('url'):
             check_link(record, issues)
         qid = record.get('wikidata') or match(record, search, entities)
