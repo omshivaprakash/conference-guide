@@ -270,7 +270,7 @@ async function start() {
       bar.title = `${MONTHS[index]}: ${count} conferences`;
       const fill = element('i');
       fill.style.height = `${Math.round((count / peak) * 100)}%`;
-      bar.append(fill, element('small', MONTHS[index].slice(0, 3)));
+      bar.append(element('b', String(count)), fill, element('small', MONTHS[index].slice(0, 3)));
       bars.append(bar);
     });
     return bars;
@@ -294,8 +294,18 @@ async function start() {
       [streams.length, 'streams'],
       [conferences.filter(record => record.months.includes(new Date().getMonth())).length, `usually in ${MONTHS[new Date().getMonth()]}`]
     ]);
-    // Stream cards page like the conference list, so home fits one screen (LitFest's festival cards do the same).
-    showPage(byId('festival-cards'), streams.map(stream => () => {
+    // Every home view is a tab, so nothing hides in a rotating strip and the page still never scrolls.
+    const thisMonth = new Date().getMonth();
+    const upTo = `${MONTHS[thisMonth]} to ${MONTHS[(thisMonth + 2) % 12]}`;
+    const soon = [0, 1, 2].flatMap(step => conferences.filter(record => record.months[0] === (thisMonth + step) % 12));
+    const recent = conferences.filter(record => record.editions).sort((a, b) => b.editions[0].year - a.editions[0].year);
+    const roaming = conferences.filter(record => record.lon === undefined);
+    const cadences = tally(conferences, record => [record.cadence]).filter(([name]) => name);
+    const indiaStreams = tally(india, record => record.streams);
+    const hosts = tally(conferences, record => (record.country ? [record.country] : []));
+    const regionRows = tally(conferences, record => [record.region]);
+    const barRows = rows => barList(rows).map(node => () => node);
+    const streamCard = stream => () => {
       const records = conferences.filter(record => record.streams.includes(stream.id));
       const card = button('', 'fcard', () => go(stream.id, 'discover'));
       const copy = element('span');
@@ -303,35 +313,28 @@ async function start() {
       copy.append(element('h3', stream.name), element('span', records.slice(0, 3).map(record => record.short).join(', '), 'd'), element('span', `${inIndia} in India · ${records.length - inIndia} worldwide`, 'r'));
       card.append(element('span', stream.icon, 'thumbnail'), copy, element('span', String(records.length), 'badge'));
       return card;
-    }));
-    // The home stats take turns in one strip, as LitFest's insights do; "Explore this" opens the full panel in the sheet.
-    const thisMonth = new Date().getMonth();
-    const soon = [0, 1, 2].flatMap(step => conferences.filter(record => record.months[0] === (thisMonth + step) % 12));
-    const recent = conferences.filter(record => record.editions).sort((a, b) => b.editions[0].year - a.editions[0].year);
-    const cadences = tally(conferences, record => [record.cadence]).filter(([name]) => name);
-    const indiaStreams = tally(india, record => record.streams);
-    const hosts = tally(conferences, record => (record.country ? [record.country] : []));
-    const conferenceRow = (record, text) => {
-      const row = element('span');
-      row.append(button(text || record.name, 'credit-link', () => showConference(record)), ` · ${record.city || record.country || 'rotates'} · ${record.month}`);
-      return row;
     };
-    const sheet = (title, category, rows) => () => { open(title, category); content.append(...rows()); };
-    const upTo = `${MONTHS[thisMonth]} to ${MONTHS[(thisMonth + 2) % 12]}`;
-    insights = [
-      { h: `${conferences.filter(record => record.months.includes(thisMonth)).length} conferences usually meet in ${MONTHS[thisMonth]}`, s: 'Conferences by usual month. Tap a bar to see what is on.', v: monthBars(conferences), act: () => listWith('', month, MONTHS[thisMonth]) },
-      { h: `Coming up · ${upTo}`, s: soon.slice(0, 4).map(record => record.short).join(', '), act: sheet('Coming up', upTo, () => soon.map(record => conferenceRow(record))) },
-      { h: `Held in ${countries.size} countries`, s: mapLegend(), v: worldMap(points(conferences)), act: () => go('', 'map') },
-      { h: `${editions.length} editions list people, talks and awards`, s: recent.slice(0, 4).map(record => editionLabel(record, record.editions[0])).join(', '), act: sheet('Editions with people and awards', 'Editions', () => recent.map(record => conferenceRow(record, editionLabel(record, record.editions[0])))) },
-      { h: `${cadences[0][1]} meet ${cadences[0][0] === 'Annual' ? 'every year' : cadences[0][0].toLowerCase()}`, s: cadences.slice(1, 4).map(([name, count]) => `${count} ${name.toLowerCase()}`).join(', '), act: sheet('How often they meet', 'Frequency', () => barList(cadences.map(([name, count]) => [name, count, () => listWith('', often, name)]))) },
-      { h: `${india.length} held in India`, s: `Most in ${indiaStreams.slice(0, 3).map(([id, count]) => `${streamMap.get(id).name} (${count})`).join(', ')}`, act: sheet('India by stream', 'India', () => barList(indiaStreams.map(([id, count]) => [streamMap.get(id).name, count, () => listWith(id, where, 'India')]))) },
-      { h: `${hosts[0][0]} hosts the most: ${hosts[0][1]}`, s: hosts.slice(1, 4).map(([name, count]) => `${name} ${count}`).join(', '), act: sheet('Top host countries', 'Countries', () => barList(hosts.slice(0, 12).map(([name, count]) => [name, count, () => listWith('', search, name)]))) }
-    ];
-    showInsight(insight);
+    homeViews = {
+      streams: { label: 'Streams', count: streams.length, grid: 'streams', note: 'Pick a stream to see its conferences, months and map.', items: () => streams.map(streamCard) },
+      months: { label: 'By month', note: `Conferences by usual month; ${MONTHS[thisMonth]} is highlighted. Tap a bar for that month’s list.`, chart: () => [monthBars(conferences)] },
+      map: { label: 'Map', count: countries.size, note: `${conferences.length - roaming.length} conferences in ${countries.size} countries. Tap a dot for what meets there.`, chart: () => [worldMap(points(conferences)), mapLegend(), button(`${roaming.length} move between countries ›`, 'hlink', () => showPlace('Move between countries', roaming))] },
+      soon: { label: 'Coming up', count: soon.length, note: `Starting ${upTo}.`, items: () => soon.map(result) },
+      editions: { label: 'Editions', count: recent.length, note: 'Editions that list people, talks, sessions and awards, newest first.', items: () => recent.map(result) },
+      often: { label: 'How often', count: cadences.length, grid: 'vbars', note: 'How often they meet. Tap a row for that list.', items: () => barRows(cadences.map(([name, count]) => [name, count, () => listWith('', often, name)])) },
+      india: { label: 'India by stream', count: india.length, grid: 'vbars', note: `${india.length} conferences held in India, by stream.`, items: () => barRows(indiaStreams.map(([id, count]) => [streamMap.get(id).name, count, () => listWith(id, where, 'India')])) },
+      countries: { label: 'Host countries', count: hosts.length, grid: 'vbars', note: 'Host countries, by number of conferences. Tap a row for that list.', items: () => barRows(hosts.map(([name, count]) => [name, count, () => listWith('', search, name)])) },
+      regions: { label: 'Regions', count: regionRows.length, grid: 'vbars', note: 'Where they meet, by region. Worldwide ones move between countries.', items: () => barRows(regionRows.map(([name, count]) => [name, count, () => listWith('', where, name)])) }
+    };
+    byId('home-tabs').replaceChildren(...Object.entries(homeViews).map(([key, item]) => {
+      const pill = button(item.label, 'pill', () => showHomeTab(key));
+      pill.dataset.tab = key;
+      if (item.count !== undefined) pill.append(element('b', String(item.count)));
+      return pill;
+    }), button('All conferences ›', 'pill', () => go('', 'list')));
+    showHomeTab(homeTab);
   }
-  // Same legend the home map had before it became an insight slide.
   function mapLegend() {
-    const legend = element('span', '', 'legend');
+    const legend = element('p', '', 'legend');
     for (const [className, text] of [['', 'Fixed city'], ['wip', 'Moves between cities in a country']]) {
       const key = element('span');
       key.append(element('i', '', className), text);
@@ -339,33 +342,24 @@ async function start() {
     }
     return legend;
   }
-  let insights = [];
-  let insight = 0;
-  let insightTimer = 0;
-  function showInsight(index) {
-    const strip = byId('home-insight');
-    insight = (index + insights.length) % insights.length;
-    const item = insights[insight];
-    const copy = element('div', '', 'lit');
-    const links = element('span', '', 'lgos');
-    links.append(button('Explore this ›', 'lgo', item.act), button('All conferences ›', 'lgo', () => go('', 'list')));
-    copy.append(element('b', item.h), typeof item.s === 'string' ? element('span', item.s) : item.s, links);
-    const dots = element('div', '', 'ldots');
-    dots.append(...insights.map((_, k) => {
-      const dot = button('', '', () => showInsight(k));
-      dot.setAttribute('aria-label', `Insight ${k + 1}`);
-      dot.setAttribute('aria-current', String(k === insight));
-      return dot;
-    }));
-    const viz = element('div', '', 'liv');
-    if (item.v) viz.append(item.v);
-    strip.replaceChildren(copy, viz, dots);
-    strip.hidden = false;
-    clearTimeout(insightTimer);
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) insightTimer = setTimeout(() => { if (view === 'home' && !detail.open) showInsight(insight + 1); }, 7000);
+  let homeViews = {};
+  let homeTab = 'streams';
+  function showHomeTab(key) {
+    homeTab = key;
+    const item = homeViews[key];
+    for (const pill of byId('home-tabs').children) if (pill.dataset.tab) pill.setAttribute('aria-pressed', String(pill.dataset.tab === key));
+    byId('home-note').textContent = item.note;
+    const grid = byId('festival-cards');
+    const chart = byId('home-chart');
+    grid.hidden = Boolean(item.chart);
+    chart.hidden = !item.chart;
+    byId('pager').hidden = Boolean(item.chart);
+    if (item.chart) chart.replaceChildren(...item.chart());
+    else {
+      grid.className = `results ${item.grid || ''}`;
+      showPage(grid, item.items());
+    }
   }
-  // Tapping the strip outside its buttons and dots shows the next insight.
-  byId('home-insight').addEventListener('click', event => { if (!event.target.closest('button, circle')) showInsight(insight + 1); });
 
   // Discover: one stream
   function renderDiscover(stream) {
