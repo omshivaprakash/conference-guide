@@ -1,0 +1,327 @@
+{
+ "checked": "2026-11-27",
+ "conferences": 159,
+ "matched": 45,
+ "unmatched": [
+  "bts",
+  "ntlf",
+  "pyconin",
+  "indiafoss",
+  "fifthel",
+  "semiconin",
+  "techsparks",
+  "mahakumbh",
+  "nullcon",
+  "c0c0n",
+  "comsnets",
+  "codscomad",
+  "fsttcs",
+  "isec",
+  "aeroindia",
+  "bmge",
+  "iisf",
+  "iasmeet",
+  "asi",
+  "apicon",
+  "csi",
+  "aioc",
+  "aicog",
+  "pedicon",
+  "ancips",
+  "asicon",
+  "bioasia",
+  "cphiin",
+  "idid",
+  "uxindia",
+  "iew",
+  "wsds",
+  "raisina",
+  "kec",
+  "itconclave",
+  "ihc",
+  "iea",
+  "aisc",
+  "iec",
+  "ces",
+  "websummit",
+  "sxsw",
+  "build",
+  "reinvent",
+  "kubecon",
+  "gitex",
+  "slush",
+  "vivatech",
+  "pyconus",
+  "siggraph",
+  "chi",
+  "icse",
+  "aaai",
+  "gtc",
+  "rsac",
+  "usenixsec",
+  "agu",
+  "apsmm",
+  "lindau",
+  "sfn",
+  "icm",
+  "iauga",
+  "asco",
+  "esc",
+  "aha",
+  "ada",
+  "esmo",
+  "rsna",
+  "wha",
+  "medica",
+  "aids",
+  "bio",
+  "wef",
+  "imfwb",
+  "milken",
+  "sff",
+  "money2020",
+  "dreamforce",
+  "disrupt",
+  "tiecon",
+  "fii",
+  "salone",
+  "ddw",
+  "ldf",
+  "config",
+  "offf",
+  "interaction",
+  "cop",
+  "sb",
+  "cwnyc",
+  "lcaw",
+  "wwweek",
+  "smartere",
+  "skoll",
+  "iucn",
+  "unga",
+  "aspen",
+  "ppf",
+  "aha-hist",
+  "isa",
+  "aas",
+  "asa",
+  "aaa",
+  "bett",
+  "iste",
+  "educause",
+  "wise",
+  "sxswedu",
+  "asugsv",
+  "iac",
+  "spacesym",
+  "icra",
+  "electronica",
+  "africatech"
+ ],
+ "issues": [
+  {
+   "id": "agu",
+   "issue": "link failed",
+   "url": "https://www.agu.org",
+   "status": 403
+  },
+  {
+   "id": "aha",
+   "issue": "link failed",
+   "url": "https://professional.heart.org",
+   "status": 403
+  },
+  {
+   "id": "aha-hist",
+   "issue": "link failed",
+   "url": "https://www.historians.org",
+   "status": 403
+  },
+  {
+   "id": "aicog",
+   "issue": "link failed",
+   "url": "https://www.fogsi.org",
+   "status": 403
+  },
+  {
+   "id": "apsmm",
+   "issue": "link failed",
+   "url": "https://www.aps.org",
+   "status": 403
+  },
+  {
+   "id": "asco",
+   "issue": "link failed",
+   "url": "https://www.asco.org",
+   "status": 403
+  },
+  {
+   "id": "bioasia",
+   "issue": "link failed",
+   "url": "https://bioasia.in",
+   "status": 0
+  },
+  {
+   "id": "blackhat",
+   "issue": "link failed",
+   "url": "https://www.blackhat.com",
+   "status": 403
+  },
+  {
+   "id": "boao",
+   "issue": "link failed",
+   "url": "https://www.boaoforum.org",
+   "status": 508
+  },
+  {
+   "id": "chi",
+   "issue": "link failed",
+   "url": "https://chi.acm.org",
+   "status": 403
+  },
+  {
+   "id": "defcon",
+   "issue": "link failed",
+   "url": "https://defcon.org",
+   "status": 0
+  },
+  {
+   "id": "educause",
+   "issue": "link failed",
+   "url": "https://events.educause.edu",
+   "status": 403
+  },
+  {
+   "id": "iasmeet",
+   "issue": "link failed",
+   "url": "https://www.ias.ac.in",
+   "status": 403
+  },
+  {
+   "id": "icm",
+   "issue": "link failed",
+   "url": "https://www.mathunion.org/icm",
+   "status": 404
+  },
+  {
+   "id": "igf",
+   "issue": "link failed",
+   "url": "https://www.intgovforum.org",
+   "status": 403
+  },
+  {
+   "id": "iisf",
+   "issue": "link failed",
+   "url": "https://www.scienceindiafest.org",
+   "status": 520
+  },
+  {
+   "id": "imfwb",
+   "issue": "link failed",
+   "url": "https://www.imf.org",
+   "status": 404
+  },
+  {
+   "id": "isc",
+   "issue": "link failed",
+   "url": "https://sciencecongress.nic.in",
+   "status": 0
+  },
+  {
+   "id": "raisina",
+   "issue": "link failed",
+   "url": "https://www.orfonline.org/raisina-dialogue",
+   "status": 404
+  },
+  {
+   "id": "rsac",
+   "issue": "link failed",
+   "url": "https://www.rsaconference.com",
+   "status": 403
+  },
+  {
+   "id": "shangrila",
+   "issue": "link failed",
+   "url": "https://www.iiss.org",
+   "status": 403
+  },
+  {
+   "id": "vivatech",
+   "issue": "link failed",
+   "url": "https://vivatechnology.com",
+   "status": 403
+  },
+  {
+   "id": "wef",
+   "issue": "link failed",
+   "url": "https://www.weforum.org",
+   "status": 403
+  },
+  {
+   "id": "whx",
+   "issue": "link failed",
+   "url": "https://www.worldhealthexpo.com",
+   "status": 403
+  },
+  {
+   "id": "adobemax",
+   "issue": "link moved",
+   "url": "https://max.adobe.com",
+   "now": "https://www.adobe.com/max.html"
+  },
+  {
+   "id": "interaction",
+   "issue": "link moved",
+   "url": "https://interaction.ixda.org",
+   "now": "https://interaction24.ixda.org/"
+  },
+  {
+   "id": "reinvent",
+   "issue": "link moved",
+   "url": "https://reinvent.awsevents.com",
+   "now": "https://aws.amazon.com/events/reinvent/"
+  },
+  {
+   "id": "spacesym",
+   "issue": "link moved",
+   "url": "https://www.spacesymposium.org",
+   "now": "https://www.spacefoundation.org/events/space-symposium/"
+  },
+  {
+   "id": "techsparks",
+   "issue": "link moved",
+   "url": "https://yourstory.com/techsparks",
+   "now": "https://techsparks.yourstory.com/"
+  },
+  {
+   "id": "egu",
+   "issue": "since differs",
+   "ours": 2004,
+   "wikidata": 2002
+  },
+  {
+   "id": "fosdem",
+   "issue": "since differs",
+   "ours": 2000,
+   "wikidata": 2001
+  },
+  {
+   "id": "gdc",
+   "issue": "since differs",
+   "ours": 1988,
+   "wikidata": 1987
+  },
+  {
+   "id": "parisair",
+   "issue": "since differs",
+   "ours": 1909,
+   "wikidata": 1908
+  },
+  {
+   "id": "wwdc",
+   "issue": "since differs",
+   "ours": 1987,
+   "wikidata": 1983
+  }
+ ]
+}
