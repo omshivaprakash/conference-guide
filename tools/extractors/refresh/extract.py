@@ -84,7 +84,9 @@ def merge(record, qid, fact, issues):
 
 def check_link(record, issues):
     status, final, _ = get(record['url'], tries=2, body=False)  # status only: a slow page body can stall the run
-    if status == 0 or status >= 400:
+    if status in (401, 403, 429):  # bot protection, not a dead site; listed apart so real failures stand out
+        issues.append({'id': record['id'], 'issue': 'link blocks robots', 'url': record['url'], 'status': status})
+    elif status == 0 or status >= 400:
         issues.append({'id': record['id'], 'issue': 'link failed', 'url': record['url'], 'status': status})
     elif host(final) != host(record['url']):
         issues.append({'id': record['id'], 'issue': 'link moved', 'url': record['url'], 'now': final})
